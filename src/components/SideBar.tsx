@@ -60,6 +60,12 @@ const SideBarStyles = styled.div`
       font-size: 1rem;
       line-height: 1.3rem;
     }
+    &__en-sonora {
+      color: #ffb375;
+      font-family: Lulo;
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
     &__list {
       display: flex;
       flex-direction: column;
@@ -118,6 +124,7 @@ export const SideBar = ({ setPortalOpen }: Props) => {
               <h1 className="navbar__nem">Nueva</h1>
               <h1 className="navbar__nem">Escuela</h1>
               <h1 className="navbar__nem">Mexicana</h1>
+              <h2 className="navbar__en-sonora">En Sonora</h2>
             </div>
           </div>
           <ul className="navbar__list">

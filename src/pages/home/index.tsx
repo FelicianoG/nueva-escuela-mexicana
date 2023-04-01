@@ -3,7 +3,6 @@ import { HomePageStyleWrapper } from "./styles";
 import flor from "../../assets/NEM-flor-icon.svg";
 import flor2 from "../../assets/NEM-flor-icon2.svg";
 import florHero from "../../assets/flor-hero.png";
-import { useNavigate } from "react-router-dom";
 import comunidadImg from "../../assets/comunidad.png";
 import { CampoFormativo } from "./components/CampoFormativo";
 import { EjeArticulador } from "./components/EjeArticulador";
@@ -12,6 +11,9 @@ import logoDGIDT from "../../assets/Sec-logos/logo-dgidt.png";
 import logoGobson from "../../assets/Sec-logos/logo-gobson.png";
 import Portal from "../../components/Portal";
 import { SideBar } from "../../components/SideBar";
+import nemInfografia from "../../assets/infografias/NEM-FLOR.jpeg";
+import rptInfografia from "../../assets/infografias/NEM-RPT.jpeg";
+import violentometroInfografia from "../../assets/infografias/Violentometro.jpeg";
 
 type Props = {};
 
@@ -52,6 +54,7 @@ export default function Home({}: Props) {
           <h1>Nueva</h1>
           <h1>Escuela</h1>
           <h1>Mexicana</h1>
+          <h2>En Sonora</h2>
         </div>
         <div className={scrollPosition > 200 ? "header__background" : "header__background header__background--transparent"}></div>
         <img onClick={() => handleFlower()} className="header__logo" src={flor} />
@@ -63,6 +66,7 @@ export default function Home({}: Props) {
               <h1>Nueva</h1>
               <h1>Escuela</h1>
               <h1>Mexicana</h1>
+              <h2>En Sonora</h2>
             </div>
             <img className="hero-section__logo-span" src={flor}></img>
           </div>
@@ -77,6 +81,29 @@ export default function Home({}: Props) {
         </div>
         <div className="hero-section__flor-container">
           <img className="hero-section__flor" src={florHero} />
+        </div>
+      </section>
+      <section className="video-section">
+        <div className="video-section__container">
+          {/* <h1 className="video-section__title"></h1>
+          <p className="video-section__paragraph"></p> */}
+          <iframe
+            className="video-section__video"
+            width="560"
+            height="315"
+            src="https://firebasestorage.googleapis.com/v0/b/nueva-escuela-mexicana-f7208.appspot.com/o/NEM.mp4?alt=media&token=fcb0461a-f703-479d-ad6d-d4ec94c91655"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+      <section className="infografias">
+        <h1 className="infografias__title">Infografías</h1>
+        <div className="infografias__image-container">
+          <img className="infografias__image" src={nemInfografia}></img>
+          <img className="infografias__image" src={rptInfografia}></img>
+          <img className="infografias__image" src={violentometroInfografia}></img>
         </div>
       </section>
       <section className="community-section">

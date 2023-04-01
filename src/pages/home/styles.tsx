@@ -50,6 +50,12 @@ export const HomePageStyleWrapper = styled.div`
       font-family: "Lulo-Bold";
       z-index: 8;
     }
+    &__nem h2 {
+      margin: 3px;
+      font-size: 0.6rem;
+      font-family: "Lulo";
+      z-index: 8;
+    }
   }
   .hero-section {
     position: relative;
@@ -68,6 +74,10 @@ export const HomePageStyleWrapper = styled.div`
       font-family: "Lulo-Bold";
     }
     &__nem h1 {
+      margin-bottom: 4px;
+    }
+    &__nem h2 {
+      font-family: "Lulo";
       margin-bottom: 4px;
     }
     &__hero-title {
@@ -90,6 +100,7 @@ export const HomePageStyleWrapper = styled.div`
     }
     &__logo-span {
       width: 30px;
+      transform: translateY(-6px);
       z-index: 4;
     }
     &__description {
@@ -127,6 +138,88 @@ export const HomePageStyleWrapper = styled.div`
       height: 400px;
       align-self: flex-end;
       justify-self: flex-end;
+    }
+  }
+  .infografias {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    gap: 40px;
+    padding: 30px;
+    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    border-top: white 5px solid;
+
+    &__title {
+      font-family: "Lulo-Bold";
+      color: white;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+
+    &__image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 40px;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+    &__image {
+      max-height: 20vw;
+      @media (max-width: 800px) {
+        max-width: 80%;
+        max-height: unset;
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .video-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0;
+
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__video {
+      width: 85%;
+      width: 70vw;
+      height: 40vw;
+      max-height: 567px;
+      max-width: 1000px;
+    }
+    &__title {
+      color: #d13d67;
+      display: flex;
+      font-family: "Lulo-Bold";
+      font-size: x-large;
+      margin-bottom: 1.5rem;
+    }
+    &__paragraph {
+      font-family: "Helvetica";
+      font-size: medium;
+      line-height: 1.5rem;
+      max-width: 40rem;
+      margin-bottom: 30px;
+      text-align: justify;
+      letter-spacing: 0.1rem;
     }
   }
   .community-section {
