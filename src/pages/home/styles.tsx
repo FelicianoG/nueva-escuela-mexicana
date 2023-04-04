@@ -243,6 +243,37 @@ export const HomePageStyleWrapper = styled.div`
       letter-spacing: 0.1rem;
     }
   }
+  .conferencias-section {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    gap: 40px;
+    padding: 30px;
+    background: linear-gradient(
+      157deg,
+      rgba(158, 0, 93, 1) 0%,
+      rgba(173, 28, 88, 1) 48%,
+      rgba(211, 100, 74, 1) 92%,
+      rgba(251, 176, 59, 1) 100%
+    );
+    border-top: white 5px solid;
+    &__title {
+      font-family: "Lulo-Bold";
+      text-align: center;
+      color: white;
+      line-height: 25px;
+    }
+    &__container {
+      display: flex;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+  }
   .community-section {
     position: relative;
     display: flex;

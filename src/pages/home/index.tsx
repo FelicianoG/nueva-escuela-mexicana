@@ -3,6 +3,9 @@ import { HomePageStyleWrapper } from "./styles";
 import flor from "../../assets/NEM-flor-icon.svg";
 import flor2 from "../../assets/NEM-flor-icon2.svg";
 import florHero from "../../assets/flor-hero.png";
+import conferencia1 from "../../assets/conferencias/1.jpeg";
+import conferencia2 from "../../assets/conferencias/2.jpeg";
+import conferencia3 from "../../assets/conferencias/3.jpeg";
 import comunidadImg from "../../assets/comunidad.png";
 import { CampoFormativo } from "./components/CampoFormativo";
 import { EjeArticulador } from "./components/EjeArticulador";
@@ -14,6 +17,7 @@ import { SideBar } from "../../components/SideBar";
 import nemInfografia from "../../assets/infografias/NEM-FLOR.jpeg";
 import rptInfografia from "../../assets/infografias/NEM-RPT.jpeg";
 import violentometroInfografia from "../../assets/infografias/Violentometro.jpeg";
+import Conferencista from "./components/Conferencista";
 
 type Props = {};
 
@@ -122,6 +126,35 @@ export default function Home({}: Props) {
             className="infografias__image"
             src={violentometroInfografia}
           ></img>
+        </div>
+      </section>
+      <section className="conferencias-section">
+        <div className="conferencias-section__title">
+          <h1>Conferencias Magistrales para la apropiación de la nem</h1>
+        </div>
+        <div className="conferencias-section__container">
+          <Conferencista
+            titulo="El modelo de la nueva escuela mexicana"
+            imagen={conferencia1}
+            nombre="Dra. Rosa María Torres Hernández"
+            cargo="Universidad pedagógica nacional"
+          ></Conferencista>
+          <Conferencista
+            titulo="El complejo proyecto de la escuela mexicana"
+            imagen={conferencia2}
+            nombre="Dr. Ángel Díaz-Barriga"
+            cargo="Universidad Autónoma de México"
+            position={["-10px", "-30px"]}
+            imageSize="300px"
+          ></Conferencista>
+          <Conferencista
+            titulo="Interculturalidad crítica en la nueva escuela mexicana"
+            imagen={conferencia3}
+            nombre="Dra. Sonia Comboni"
+            cargo="Universidad Autónoma Metropolitana"
+            position={["-170px", "-30px"]}
+            imageSize="500px"
+          ></Conferencista>
         </div>
       </section>
       <section className="community-section">
