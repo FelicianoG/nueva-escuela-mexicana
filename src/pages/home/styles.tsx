@@ -23,7 +23,13 @@ export const HomePageStyleWrapper = styled.div`
       position: fixed;
       top: 0;
       left: 0;
-      background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+      background: linear-gradient(
+        157deg,
+        rgba(158, 0, 93, 1) 0%,
+        rgba(173, 28, 88, 1) 48%,
+        rgba(211, 100, 74, 1) 92%,
+        rgba(251, 176, 59, 1) 100%
+      );
       height: 4rem;
       width: 100%;
       transition: opacity 1s;
@@ -55,6 +61,7 @@ export const HomePageStyleWrapper = styled.div`
       font-size: 0.6rem;
       font-family: "Lulo";
       z-index: 8;
+      color: #ffb375;
     }
   }
   .hero-section {
@@ -62,7 +69,13 @@ export const HomePageStyleWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    background: linear-gradient(
+      157deg,
+      rgba(158, 0, 93, 1) 0%,
+      rgba(173, 28, 88, 1) 48%,
+      rgba(211, 100, 74, 1) 92%,
+      rgba(251, 176, 59, 1) 100%
+    );
     width: 100%;
     height: 500px;
 
@@ -79,6 +92,7 @@ export const HomePageStyleWrapper = styled.div`
     &__nem h2 {
       font-family: "Lulo";
       margin-bottom: 4px;
+      color: #ffb375;
     }
     &__hero-title {
       display: flex;
@@ -150,7 +164,13 @@ export const HomePageStyleWrapper = styled.div`
     min-height: 700px;
     gap: 40px;
     padding: 30px;
-    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    background: linear-gradient(
+      157deg,
+      rgba(158, 0, 93, 1) 0%,
+      rgba(173, 28, 88, 1) 48%,
+      rgba(211, 100, 74, 1) 92%,
+      rgba(251, 176, 59, 1) 100%
+    );
     border-top: white 5px solid;
 
     &__title {
@@ -206,11 +226,12 @@ export const HomePageStyleWrapper = styled.div`
       max-width: 1000px;
     }
     &__title {
-      color: #d13d67;
-      display: flex;
       font-family: "Lulo-Bold";
-      font-size: x-large;
-      margin-bottom: 1.5rem;
+      color: #d13d67;
+      margin-bottom: 30px;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
     }
     &__paragraph {
       font-family: "Helvetica";
@@ -315,7 +336,13 @@ export const HomePageStyleWrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    background: linear-gradient(
+      157deg,
+      rgba(158, 0, 93, 1) 0%,
+      rgba(173, 28, 88, 1) 48%,
+      rgba(211, 100, 74, 1) 92%,
+      rgba(251, 176, 59, 1) 100%
+    );
     color: white;
     min-height: 800px;
     padding-bottom: 100px;
@@ -477,7 +504,13 @@ export const HomePageStyleWrapper = styled.div`
     z-index: 6;
 
     &__division {
-      background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+      background: linear-gradient(
+        157deg,
+        rgba(158, 0, 93, 1) 0%,
+        rgba(173, 28, 88, 1) 48%,
+        rgba(211, 100, 74, 1) 92%,
+        rgba(251, 176, 59, 1) 100%
+      );
       height: 12px;
       width: 100%;
       opacity: 100%;
@@ -511,7 +544,13 @@ export const HomePageStyleWrapper = styled.div`
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+      background: linear-gradient(
+        157deg,
+        rgba(158, 0, 93, 1) 0%,
+        rgba(173, 28, 88, 1) 48%,
+        rgba(211, 100, 74, 1) 92%,
+        rgba(251, 176, 59, 1) 100%
+      );
       width: 100%;
       height: 700px;
       overflow-x: hidden;
