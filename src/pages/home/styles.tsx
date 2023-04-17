@@ -140,6 +140,89 @@ export const HomePageStyleWrapper = styled.div`
       justify-self: flex-end;
     }
   }
+  .rutas-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    height: 500px;
+
+    overflow-x: hidden;
+
+    &__nem {
+      color: white;
+      font-size: 2em;
+      font-family: "Lulo-Bold";
+    }
+    &__nem h1 {
+      margin-bottom: 4px;
+    }
+    &__nem h2 {
+      font-family: "Lulo";
+      margin-bottom: 4px;
+    }
+    &__hero-title {
+      display: flex;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      width: 100%;
+      margin-right: 18rem;
+      max-width: 800px;
+      z-index: 5;
+      @media (max-width: 1300px) and (min-width: 800px) {
+        margin-left: 50px;
+      }
+    }
+    &__logo-span {
+      width: 30px;
+      transform: translateY(-6px);
+      z-index: 4;
+    }
+    &__description {
+      font-family: "Helvetica";
+      color: white;
+      max-width: 30rem;
+      margin-bottom: 30px;
+      text-align: justify;
+      letter-spacing: 0.1rem;
+    }
+    &__btn {
+      background-color: #d13d67;
+      border: none;
+      padding: 1rem 2rem;
+      font-family: "Lulo-Bold";
+      color: white;
+      border-radius: 8px;
+      transition: all 0.25s ease-in-out;
+      cursor: pointer;
+    }
+    &__btn:hover {
+      background-color: #de557c;
+    }
+    &__flor-container {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      align-items: flex-end;
+      justify-content: flex-end;
+      z-index: 1;
+    }
+    &__flor {
+      width: 400px;
+      height: 400px;
+      align-self: flex-end;
+      justify-self: flex-end;
+    }
+  }
   .infografias {
     display: flex;
     box-sizing: border-box;
