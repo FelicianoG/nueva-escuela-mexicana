@@ -14,6 +14,7 @@ import { SideBar } from "../../components/SideBar";
 import nemInfografia from "../../assets/infografias/NEM-FLOR.jpeg";
 import rptInfografia from "../../assets/infografias/NEM-RPT.jpeg";
 import violentometroInfografia from "../../assets/infografias/Violentometro.jpeg";
+import Rutas from "../../components/Rutas";
 
 type Props = {};
 
@@ -95,6 +96,9 @@ export default function Home({}: Props) {
           <img className="hero-section__flor" src={florHero} />
         </div>
       </section>
+      <section className="rutas-section">
+        <Rutas></Rutas>
+      </section>
       <section className="video-section">
         <div className="video-section__container">
           <h1 className="video-section__title">
@@ -102,7 +106,7 @@ export default function Home({}: Props) {
           </h1>
           {/* <h1 className="video-section__title"></h1>
           <p className="video-section__paragraph"></p> */}
-          <iframe
+          {/* <iframe
             className="video-section__video"
             width="560"
             height="315"
@@ -110,7 +114,7 @@ export default function Home({}: Props) {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
         </div>
       </section>
       <section className="infografias">
