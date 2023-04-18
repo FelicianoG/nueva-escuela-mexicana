@@ -15,6 +15,7 @@ import nemInfografia from "../../assets/infografias/NEM-FLOR.jpeg";
 import rptInfografia from "../../assets/infografias/NEM-RPT.jpeg";
 import violentometroInfografia from "../../assets/infografias/Violentometro.jpeg";
 import Rutas from "../../components/Rutas";
+import RutasMobil from "../../components/RutasMobil";
 
 type Props = {};
 
@@ -57,18 +58,8 @@ export default function Home({}: Props) {
           <h1>Mexicana</h1>
           <h2>En Sonora</h2>
         </div>
-        <div
-          className={
-            scrollPosition > 200
-              ? "header__background"
-              : "header__background header__background--transparent"
-          }
-        ></div>
-        <img
-          onClick={() => handleFlower()}
-          className="header__logo"
-          src={flor}
-        />
+        <div className={scrollPosition > 200 ? "header__background" : "header__background header__background--transparent"}></div>
+        <img onClick={() => handleFlower()} className="header__logo" src={flor} />
       </header>
       <section className="hero-section">
         <div className="hero-section__container">
@@ -83,9 +74,7 @@ export default function Home({}: Props) {
           </div>
           <div className="hero-section__description">
             <p>
-              Educación basada en el respeto irrestricto de la dignidad de las
-              personas, con un enfoque de derechos humanos y de igualdad
-              sustantiva.
+              Educación basada en el respeto irrestricto de la dignidad de las personas, con un enfoque de derechos humanos y de igualdad sustantiva.
             </p>
           </div>
           {/* <a href="https://nuevaescuelamexicana.sep.gob.mx/" className="hero-section__btn">
@@ -98,15 +87,14 @@ export default function Home({}: Props) {
       </section>
       <section className="rutas-section">
         <Rutas></Rutas>
+        <RutasMobil></RutasMobil>
       </section>
       <section className="video-section">
         <div className="video-section__container">
-          <h1 className="video-section__title">
-            Implementación de la NEM en Sonora
-          </h1>
+          <h1 className="video-section__title">Implementación de la NEM en Sonora</h1>
           {/* <h1 className="video-section__title"></h1>
           <p className="video-section__paragraph"></p> */}
-          {/* <iframe
+          <iframe
             className="video-section__video"
             width="560"
             height="315"
@@ -114,7 +102,7 @@ export default function Home({}: Props) {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe> */}
+          ></iframe>
         </div>
       </section>
       <section className="infografias">
@@ -122,10 +110,7 @@ export default function Home({}: Props) {
         <div className="infografias__image-container">
           <img className="infografias__image" src={nemInfografia}></img>
           <img className="infografias__image" src={rptInfografia}></img>
-          <img
-            className="infografias__image"
-            src={violentometroInfografia}
-          ></img>
+          <img className="infografias__image" src={violentometroInfografia}></img>
         </div>
       </section>
       <section className="community-section">
@@ -138,13 +123,9 @@ export default function Home({}: Props) {
           <div className="community-section__text">
             <h1 className="community-section__text__title">COMUNIDAD</h1>
             <p className="community-section__text__paragraph">
-              La comunidad proporciona un sentido de pertenencia, conexión y
-              apoyo mutuo entre sus miembros. Permite la colaboración en
-              proyectos y la resolución de problemas colectivos, fomentando el
-              desarrollo social y económico. La comunidad también puede ser un
-              espacio de aprendizaje, crecimiento personal y cultural, y puede
-              contribuir a la construcción de identidades colectivas y valores
-              compartidos.
+              La comunidad proporciona un sentido de pertenencia, conexión y apoyo mutuo entre sus miembros. Permite la colaboración en proyectos y la
+              resolución de problemas colectivos, fomentando el desarrollo social y económico. La comunidad también puede ser un espacio de
+              aprendizaje, crecimiento personal y cultural, y puede contribuir a la construcción de identidades colectivas y valores compartidos.
             </p>
           </div>
         </div>
@@ -156,15 +137,10 @@ export default function Home({}: Props) {
             <h1 className="campos-formativos__title">CAMPOS FORMATIVOS</h1>
           </div>
           <p className="campos-formativos__description">
-            Un Campo Formativo se entiende como la pluralidad de saberes y
-            conocimientos que permiten acercarse a la realidad que se pretende
-            estudiar. De esta manera, los contenidos de los programas de
-            estudios son una disposición de conocimientos y saberes en un campo
-            formativo que cobran sentido más allá de su significado particular
-            en la relación que se establezca entre ellos y los ejes
-            articuladores, los cuales vinculan el conocimiento con hechos
-            concretos de la realidad mediante problematizaciones o temas
-            generales de estudio.
+            Un Campo Formativo se entiende como la pluralidad de saberes y conocimientos que permiten acercarse a la realidad que se pretende
+            estudiar. De esta manera, los contenidos de los programas de estudios son una disposición de conocimientos y saberes en un campo formativo
+            que cobran sentido más allá de su significado particular en la relación que se establezca entre ellos y los ejes articuladores, los cuales
+            vinculan el conocimiento con hechos concretos de la realidad mediante problematizaciones o temas generales de estudio.
           </p>
         </div>
         <div className="campos-formativos__campos">
@@ -181,11 +157,9 @@ export default function Home({}: Props) {
             <h1 className="ejes-articuladores__title">EJES ARTICULADORES</h1>
           </div>
           <p className="ejes-articuladores__description">
-            Los siete ejes articuladores del Plan de Estudios 2022 para la
-            Educación Preescolar, Primaria y Secundaria son: Inclusión,
-            Pensamiento crítico, Interculturalidad crítica, Igualdad de género,
-            Vida saludable, Apropiación de las culturas a través de la lectura y
-            la escritura, y Artes y experiencias estéticas.
+            Los siete ejes articuladores del Plan de Estudios 2022 para la Educación Preescolar, Primaria y Secundaria son: Inclusión, Pensamiento
+            crítico, Interculturalidad crítica, Igualdad de género, Vida saludable, Apropiación de las culturas a través de la lectura y la escritura,
+            y Artes y experiencias estéticas.
           </p>
         </div>
         <div className="ejes-articuladores__ejes">
