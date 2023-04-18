@@ -29,6 +29,8 @@ const RutasStyles = styled.div`
   .mini-images {
     position: absolute;
     width: 20%;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
   .arte {
     transform: translate(70%, 65%);
