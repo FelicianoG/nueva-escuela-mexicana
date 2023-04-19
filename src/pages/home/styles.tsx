@@ -2,6 +2,15 @@ import styled from "styled-components";
 
 export const HomePageStyleWrapper = styled.div`
   position: relative;
+  iframe {
+    width: 50vw;
+    height: calc(50vw * 0.56);
+    @media (max-width: 800px) {
+      width: 100%;
+      height: calc(100vw * 0.56);
+    }
+  }
+
   a {
     text-decoration: none;
   }
@@ -240,6 +249,7 @@ export const HomePageStyleWrapper = styled.div`
     &__title {
       font-family: "Lulo-Bold";
       color: white;
+      margin-bottom: 4rem;
       text-align: center;
       @media (max-width: 800px) {
         margin-top: 40px;
@@ -319,14 +329,10 @@ export const HomePageStyleWrapper = styled.div`
     min-height: 700px;
     gap: 40px;
     padding: 30px;
-    background: linear-gradient(
-      157deg,
-      rgba(158, 0, 93, 1) 0%,
-      rgba(173, 28, 88, 1) 48%,
-      rgba(211, 100, 74, 1) 92%,
-      rgba(251, 176, 59, 1) 100%
-    );
+    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
     border-top: white 5px solid;
+    padding-top: clamp(2rem, 20vw, 10rem);
+    padding-bottom: clamp(2rem, 20vw, 10rem);
     &__title {
       font-family: "Lulo-Bold";
       text-align: center;
@@ -448,6 +454,7 @@ export const HomePageStyleWrapper = styled.div`
     &__title {
       font-family: "Lulo-Bold";
       font-size: x-large;
+      text-align: center;
     }
     &__description {
       font-family: "Helvetica";
@@ -540,6 +547,84 @@ export const HomePageStyleWrapper = styled.div`
       width: 100%;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+  }
+  .capacitaciones-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: white;
+    color: #d13d67;
+    color: #555;
+    padding: 80px 0;
+
+    .creson {
+      width: clamp(14rem, 30%, 300px);
+      margin-bottom: clamp(0.2rem, calc(0.2rem + 2vw), 3rem);
+    }
+    & > div {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      overflow-x: auto;
+    }
+    h1 {
+      font-family: "Lulo-Bold";
+      color: #d13d67;
+      margin-bottom: 30px;
+      line-height: 1.4rem;
+      text-align: center;
+      max-width: 80%;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+    h2 {
+      font-family: "Lulo";
+      color: #d13d67;
+      font-size: 0.8rem;
+      margin-bottom: 30px;
+      line-height: 1.4rem;
+      text-align: center;
+      max-width: 80%;
+      margin-top: 0;
+      @media (max-width: 800px) {
+        margin-top: 0;
+      }
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      font-family: "Lulo";
+      font-size: clamp(0.6rem, 1vw, 0.8rem);
+      line-height: 1.2rem;
+    }
+    th,
+    td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      color: #333;
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+      background-color: #ddd;
+    }
+    th {
+      font-family: "Lulo-bold";
+      background-color: #de557c;
+      color: white;
     }
   }
   @media (max-width: 600px) {

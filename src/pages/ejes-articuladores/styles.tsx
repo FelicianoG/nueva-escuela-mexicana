@@ -59,6 +59,7 @@ export const CampoStyleWrapper = styled.div`
     min-height: 80vh;
     margin-top: 4rem;
     overflow-x: hidden;
+    text-align: center;
 
     &__title {
       color: white;

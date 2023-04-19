@@ -7,6 +7,7 @@ import genero from "../assets/rutas/genero.png";
 import interculturalidad from "../assets/rutas/interculturalidad.png";
 import medioAmbiente from "../assets/rutas/medio-ambiente.png";
 import vidaSaludable from "../assets/rutas/vida-saludable.png";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
@@ -92,16 +93,29 @@ const RutasStyles = styled.div`
 `;
 
 export default function Rutas({}: Props) {
+  const navigate = useNavigate();
   return (
     <RutasStyles id="rutas">
       <img className="escuelas" src={escuelas}></img>
       <img className="mini-images arte" src={arte}></img>
-      <img className="mini-images genero" src={genero}></img>
+      <img
+        onClick={() => {
+          navigate(`/ejes-transversales/Perspectiva%20de%20Género,%20Cuerpo%20y%20Sexualidades`);
+        }}
+        className="mini-images genero"
+        src={genero}
+      ></img>
       <img className="mini-images vidaSaludable" src={vidaSaludable}></img>
       <img className="mini-images medioAmbiente" src={medioAmbiente}></img>
       <img className="mini-images interculturalidad" src={interculturalidad}></img>
       <img className="mini-images ciudadania" src={ciudadania}></img>
-      <img className="mini-images ciencia" src={ciencia}></img>
+      <img
+        onClick={() => {
+          navigate(`/ejes-transversales/Ciencia,%20Tecnología%20y%20Sociedad%20del%20Futuro`);
+        }}
+        className="mini-images ciencia"
+        src={ciencia}
+      ></img>
     </RutasStyles>
   );
 }

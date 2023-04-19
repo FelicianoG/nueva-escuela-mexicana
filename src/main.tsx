@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home";
 import CamposFormativos from "./pages/campos-formativos";
 import EjesArticuladores from "./pages/ejes-articuladores";
+import EjesTransversales from "./pages/ejes-transversales";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,17 @@ const router = createBrowserRouter([
   {
     path: "/ejes-articuladores",
     element: <EjesArticuladores />,
+    errorElement: <h1>Error Page</h1>,
+    children: [
+      {
+        path: ":eje",
+        element: <h1>example page</h1>,
+      },
+    ],
+  },
+  {
+    path: "/ejes-transversales",
+    element: <EjesTransversales />,
     errorElement: <h1>Error Page</h1>,
     children: [
       {

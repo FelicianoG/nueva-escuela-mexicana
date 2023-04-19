@@ -6,6 +6,8 @@ import florHero from "../../assets/flor-hero.png";
 import conferencia1 from "../../assets/conferencias/1.jpeg";
 import conferencia2 from "../../assets/conferencias/2.jpeg";
 import conferencia3 from "../../assets/conferencias/3.jpeg";
+import conferencia4 from "../../assets/conferencias/4.jpg";
+import conferencia5 from "../../assets/conferencias/5.jpg";
 import comunidadImg from "../../assets/comunidad.png";
 import { CampoFormativo } from "./components/CampoFormativo";
 import { EjeArticulador } from "./components/EjeArticulador";
@@ -20,6 +22,9 @@ import violentometroInfografia from "../../assets/infografias/Violentometro.jpeg
 import Rutas from "../../components/Rutas";
 import RutasMobil from "../../components/RutasMobil";
 import Conferencista from "./components/Conferencista";
+import Table from "../../components/Table";
+import { capacitaciones, proyeccion } from "./utils";
+import creson from "../../assets/creson.png";
 
 type Props = {};
 
@@ -62,18 +67,8 @@ export default function Home({}: Props) {
           <h1>Mexicana</h1>
           <h2>En Sonora</h2>
         </div>
-        <div
-          className={
-            scrollPosition > 200
-              ? "header__background"
-              : "header__background header__background--transparent"
-          }
-        ></div>
-        <img
-          onClick={() => handleFlower()}
-          className="header__logo"
-          src={flor}
-        />
+        <div className={scrollPosition > 200 ? "header__background" : "header__background header__background--transparent"}></div>
+        <img onClick={() => handleFlower()} className="header__logo" src={flor} />
       </header>
       <section className="hero-section">
         <div className="hero-section__container">
@@ -88,9 +83,7 @@ export default function Home({}: Props) {
           </div>
           <div className="hero-section__description">
             <p>
-              Educación basada en el respeto irrestricto de la dignidad de las
-              personas, con un enfoque de derechos humanos y de igualdad
-              sustantiva.
+              Educación basada en el respeto irrestricto de la dignidad de las personas, con un enfoque de derechos humanos y de igualdad sustantiva.
             </p>
           </div>
           {/* <a href="https://nuevaescuelamexicana.sep.gob.mx/" className="hero-section__btn">
@@ -107,12 +100,19 @@ export default function Home({}: Props) {
       </section>
       <section className="video-section">
         <div className="video-section__container">
-          <h1 className="video-section__title">
-            Implementación de la NEM en Sonora
-          </h1>
+          <h1 className="video-section__title">Implementación de la NEM en Sonora</h1>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JLZi6vmvgcQ"
+            title="Nueva Escuela Mexicana"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
           {/* <h1 className="video-section__title"></h1>
           <p className="video-section__paragraph"></p> */}
-          <iframe
+          {/* <iframe
             className="video-section__video"
             width="560"
             height="315"
@@ -120,7 +120,7 @@ export default function Home({}: Props) {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
         </div>
       </section>
       <section className="infografias">
@@ -128,15 +128,12 @@ export default function Home({}: Props) {
         <div className="infografias__image-container">
           <img className="infografias__image" src={nemInfografia}></img>
           <img className="infografias__image" src={rptInfografia}></img>
-          <img
-            className="infografias__image"
-            src={violentometroInfografia}
-          ></img>
+          <img className="infografias__image" src={violentometroInfografia}></img>
         </div>
       </section>
       <section className="conferencias-section">
         <div className="conferencias-section__title">
-          <h1>Conferencias Magistrales para la apropiación de la nem</h1>
+          <h1>Programa de Conferencias Magistrales</h1>
         </div>
         <div className="conferencias-section__container">
           <Conferencista
@@ -154,42 +151,51 @@ export default function Home({}: Props) {
             imageSize="300px"
           ></Conferencista>
           <Conferencista
-            titulo="Interculturalidad crítica en la nueva escuela mexicana"
+            titulo="“Bases metodológicas de la Nueva Escuela Mexicana” Secundaria"
             imagen={conferencia3}
-            nombre="Dra. Sonia Comboni"
-            cargo="Universidad Autónoma Metropolitana"
-            position={["-170px", "-30px"]}
-            imageSize="500px"
+            nombre="Dra. Helga Patricia Frola Ruiz "
+            cargo="Centro de Investigación Educativa y Capacitación Institucional"
+            position={["6px", "0px"]}
+            imageSize="190px"
           ></Conferencista>
         </div>
       </section>
+
       <section className="conferencias-section">
         <div className="conferencias-section__title">
-          <h1>Conferencias Magistrales para la apropiación de la nem</h1>
+          <h1>Eventos: Educación Media Superior</h1>
         </div>
         <div className="conferencias-section__container">
           <Conferencista
-            titulo="El modelo de la nueva escuela mexicana"
-            imagen={conferencia1}
-            nombre="Dra. Rosa María Torres Hernández"
-            cargo="Universidad pedagógica nacional"
-          ></Conferencista>
-          <Conferencista
-            titulo="El complejo proyecto de la escuela mexicana"
-            imagen={conferencia2}
-            nombre="Dr. Ángel Díaz-Barriga"
-            cargo="Universidad Autónoma de México"
-            position={["-10px", "-30px"]}
-            imageSize="300px"
-          ></Conferencista>
-          <Conferencista
-            titulo="Interculturalidad crítica en la nueva escuela mexicana"
-            imagen={conferencia3}
+            titulo="Conferencia magistral:
+            “Interculturalidad Crítica en la Nueva Escuela Mexicana”"
+            imagen={conferencia5}
             nombre="Dra. Sonia Comboni"
             cargo="Universidad Autónoma Metropolitana"
-            position={["-170px", "-30px"]}
-            imageSize="500px"
+            position={["-340px", "-70px"]}
+            imageSize="800px"
           ></Conferencista>
+          <Conferencista
+            titulo="Taller:
+            “Cultura Digital y Educación Media Superior”"
+            imagen={conferencia4}
+            nombre="Dr. Alberto Ramírez Martinell"
+            cargo="Universidad Veracruzana"
+            position={["-60px", "-10px"]}
+            imageSize="280px"
+          ></Conferencista>
+        </div>
+      </section>
+      <section className="capacitaciones-section">
+        <h1>Capacitaciones ofrecidas en educación básica en el marco de la NEM</h1>
+        <Table rows={capacitaciones} headerColor="#d13d67" />
+      </section>
+      <section className="capacitaciones-section">
+        <img className="creson" src={creson} alt="logo creson"></img>
+        <h1>PROYECCIÓN DE CAPACITACIÓN AL PERSONAL EDUCATIVO 2023-2024</h1>
+        <h2>“Fortalecimiento Pedagógico en el marco de la Nueva Escuela Mexicana”</h2>
+        <div>
+          <Table rows={proyeccion} headerColor="#d13d67" />
         </div>
       </section>
       <section className="community-section">
@@ -202,13 +208,9 @@ export default function Home({}: Props) {
           <div className="community-section__text">
             <h1 className="community-section__text__title">COMUNIDAD</h1>
             <p className="community-section__text__paragraph">
-              La comunidad proporciona un sentido de pertenencia, conexión y
-              apoyo mutuo entre sus miembros. Permite la colaboración en
-              proyectos y la resolución de problemas colectivos, fomentando el
-              desarrollo social y económico. La comunidad también puede ser un
-              espacio de aprendizaje, crecimiento personal y cultural, y puede
-              contribuir a la construcción de identidades colectivas y valores
-              compartidos.
+              La comunidad proporciona un sentido de pertenencia, conexión y apoyo mutuo entre sus miembros. Permite la colaboración en proyectos y la
+              resolución de problemas colectivos, fomentando el desarrollo social y económico. La comunidad también puede ser un espacio de
+              aprendizaje, crecimiento personal y cultural, y puede contribuir a la construcción de identidades colectivas y valores compartidos.
             </p>
           </div>
         </div>
@@ -220,15 +222,10 @@ export default function Home({}: Props) {
             <h1 className="campos-formativos__title">CAMPOS FORMATIVOS</h1>
           </div>
           <p className="campos-formativos__description">
-            Un Campo Formativo se entiende como la pluralidad de saberes y
-            conocimientos que permiten acercarse a la realidad que se pretende
-            estudiar. De esta manera, los contenidos de los programas de
-            estudios son una disposición de conocimientos y saberes en un campo
-            formativo que cobran sentido más allá de su significado particular
-            en la relación que se establezca entre ellos y los ejes
-            articuladores, los cuales vinculan el conocimiento con hechos
-            concretos de la realidad mediante problematizaciones o temas
-            generales de estudio.
+            Un Campo Formativo se entiende como la pluralidad de saberes y conocimientos que permiten acercarse a la realidad que se pretende
+            estudiar. De esta manera, los contenidos de los programas de estudio son una disposición de conocimientos y saberes en un campo formativo
+            que cobran sentido más allá de su significado particular en la relación que se establezca entre ellos y los ejes articuladores, los cuales
+            vinculan el conocimiento con hechos concretos de la realidad mediante problematizaciones o temas generales de estudio.
           </p>
         </div>
         <div className="campos-formativos__campos">
@@ -245,11 +242,7 @@ export default function Home({}: Props) {
             <h1 className="ejes-articuladores__title">EJES ARTICULADORES</h1>
           </div>
           <p className="ejes-articuladores__description">
-            Los siete ejes articuladores del Plan de Estudios 2022 para la
-            Educación Preescolar, Primaria y Secundaria son: Inclusión,
-            Pensamiento crítico, Interculturalidad crítica, Igualdad de género,
-            Vida saludable, Apropiación de las culturas a través de la lectura y
-            la escritura, y Artes y experiencias estéticas.
+            Los siete ejes articuladores del Plan de Estudios 2022 para la educación preescolar, primaria y secundaria son:
           </p>
         </div>
         <div className="ejes-articuladores__ejes">
@@ -272,6 +265,7 @@ export default function Home({}: Props) {
           </ul>
         </div>
       </section>
+
       <footer className="footer">
         <div className="footer__division"></div>
         <div className="footer__container">
