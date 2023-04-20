@@ -569,6 +569,9 @@ export const HomePageStyleWrapper = styled.div`
       justify-content: center;
       width: 100%;
       overflow-x: auto;
+      @media (max-width: 680px) {
+        justify-content: flex-start;
+      }
     }
     h1 {
       font-family: "Lulo-Bold";

@@ -143,7 +143,7 @@ export default function Home({}: Props) {
             cargo="Universidad pedagógica nacional"
           ></Conferencista>
           <Conferencista
-            titulo="El complejo proyecto de la escuela mexicana"
+            titulo="El complejo proyecto de la nueva escuela mexicana"
             imagen={conferencia2}
             nombre="Dr. Ángel Díaz-Barriga"
             cargo="Universidad Autónoma de México"

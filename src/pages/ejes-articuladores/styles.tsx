@@ -41,12 +41,20 @@ export const CampoStyleWrapper = styled.div`
       z-index: 4;
       margin: 0 0 4px 3rem;
       cursor: pointer;
-    }
-    &__nem h1 {
-      margin: 3px;
-      font-size: 0.6rem;
-      font-family: "Lulo-Bold";
-      z-index: 8;
+
+      h1 {
+        margin: 3px;
+        font-size: 0.6rem;
+        font-family: "Lulo-Bold";
+        z-index: 8;
+      }
+      h2 {
+        margin: 3px;
+        font-size: 0.6rem;
+        font-family: "Lulo";
+        z-index: 8;
+        color: #ffb375;
+      }
     }
   }
   .campo-formativo {

@@ -30,6 +30,7 @@ export default function EjesTransversales() {
           <h1>Nueva</h1>
           <h1>Escuela</h1>
           <h1>Mexicana</h1>
+          <h2>En Sonora</h2>
         </div>
         <div className="header__background"></div>
         <img onClick={() => handleFlower()} className="header__logo" src={flor} />
