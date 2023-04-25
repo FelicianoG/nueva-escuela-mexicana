@@ -105,10 +105,34 @@ export default function Rutas({}: Props) {
         className="mini-images genero"
         src={genero}
       ></img>
-      <img className="mini-images vidaSaludable" src={vidaSaludable}></img>
-      <img className="mini-images medioAmbiente" src={medioAmbiente}></img>
-      <img className="mini-images interculturalidad" src={interculturalidad}></img>
-      <img className="mini-images ciudadania" src={ciudadania}></img>
+      <img
+        className="mini-images vidaSaludable"
+        onClick={() => {
+          navigate(`/ejes-transversales/Vida%20saludable,%20impulso%20al%20deporte%20y%20prevención%20de%20adicciones`);
+        }}
+        src={vidaSaludable}
+      ></img>
+      <img
+        className="mini-images medioAmbiente"
+        onClick={() => {
+          navigate(`/ejes-transversales/Medio%20ambiente,%20sustentabilidad%20y%20territorio`);
+        }}
+        src={medioAmbiente}
+      ></img>
+      <img
+        className="mini-images interculturalidad"
+        onClick={() => {
+          navigate(`/ejes-transversales/Interculturalidad`);
+        }}
+        src={interculturalidad}
+      ></img>
+      <img
+        className="mini-images ciudadania"
+        onClick={() => {
+          navigate(`/ejes-transversales/Ciudadanía%20para%20una%20participación%20democrática`);
+        }}
+        src={ciudadania}
+      ></img>
       <img
         onClick={() => {
           navigate(`/ejes-transversales/Ciencia,%20Tecnología%20y%20Sociedad%20del%20Futuro`);

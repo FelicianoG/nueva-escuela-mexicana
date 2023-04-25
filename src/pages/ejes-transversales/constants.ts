@@ -8,6 +8,11 @@ import imagenSoyImportante from "./assets/genero/imagenSoyImportante.png";
 import imagenProyectoVida from "./assets/genero/imagenProyectoVida.png";
 import imagenConvocatorias from "./assets/genero/imagenConvocatorias.png";
 import imagenAcoso from "./assets/genero/imagenAcoso.png";
+import matenteReal from "./assets/salud/mantenteReal.png";
+import oasisEscolar from "./assets/medio-ambiente/oasisEscolares.png";
+import interculturalidad from "./assets/interculturalidad/interculturalidad.png";
+import trucha from "./assets/ciudadania/trucha.png";
+import escuelas from "./assets/ciudadania/escuelas.png";
 
 export const EJES_ARTICULADORES: any = {
   Inclusión:
@@ -84,6 +89,40 @@ export const EJES_TRANSVERSALES: any = {
       "Capacitación y formación en Derechos Humanos y Perspectiva de Género",
       "Promover la igualdad y la equidad en un marco de DH y con perspectiva de género en el sector educativo para fomentar una cultura de respeto hacia los derechos de NNA así como los derechos de las NAM.",
       imagenAcoso,
+    ],
+  ],
+  "Vida saludable, impulso al deporte y prevención de adicciones": [
+    [
+      "Mantente Real",
+      "Utilizar las estrategias Rechazar, Explicar, Alejarse o No Ir, Levantarse o Irse (REAL) para enseñar a los estudiantes cómo decir NO a los ofrecimientos de sustancias como alcohol, tabaco y otras drogas de una forma práctica y fácil. ",
+      matenteReal,
+    ],
+  ],
+  "Medio ambiente, sustentabilidad y territorio": [
+    [
+      "Oasis escolares",
+      "Identificar diversas experiencias de los y las estudiantes acerca de los significados que le dan al ecosistema en el que viven, con el fin de desarrollar propuestas para la mejora del medio ambiente escolar, familiar y regional. ",
+      oasisEscolar,
+    ],
+  ],
+  Interculturalidad: [["Intercambio Académico", "Transformando la Educación Indígena. Planes y programas 2022", interculturalidad]],
+  "Ciudadanía para una participación democrática": [
+    [
+      "Trucha con mi escuela",
+      "Promover y coordinar acciones con la Secretaría de Seguridad para vigilar, cuidar y proteger los inmuebles escolares en los períodos de descanso escolar. ",
+      trucha,
+    ],
+    [
+      "Escuelas para la transformación",
+      "Fortalecer la capacidad de las escuelas secundarias de Sonora para realizar diagnósticos con relación a la convivencia, la prevención de las violencias y del abandono escolar y la ciudadanía digital. ",
+      escuelas,
+    ],
+  ],
+  "Expresión artística, creatividad y habilidades socioemocionales": [
+    [
+      "Mantente Real",
+      "Utilizar las estrategias Rechazar, Explicar, Alejarse o No Ir, Levantarse o Irse (REAL) para enseñar a los estudiantes cómo decir NO a los ofrecimientos de sustancias como alcohol, tabaco y otras drogas de una forma práctica y fácil. ",
+      matenteReal,
     ],
   ],
 };
