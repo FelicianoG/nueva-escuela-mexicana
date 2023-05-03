@@ -85,9 +85,11 @@ export const HomePageStyleWrapper = styled.div`
     }
     &__nem h1 {
       margin-bottom: 4px;
+      font-size: 2rem;
     }
     &__nem h2 {
       font-family: "Lulo";
+      font-size: large;
       margin-bottom: 4px;
       color: #ffb375;
     }
@@ -145,8 +147,8 @@ export const HomePageStyleWrapper = styled.div`
       z-index: 1;
     }
     &__flor {
-      width: 400px;
-      height: 400px;
+      width: 600px;
+      height: 600px;
       align-self: flex-end;
       justify-self: flex-end;
     }
@@ -274,6 +276,61 @@ export const HomePageStyleWrapper = styled.div`
         &:last-child {
           margin-bottom: 40px;
         }
+      }
+    }
+  }
+  .documentos {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    gap: 40px;
+    padding: 30px;
+    &__title {
+      font-family: "Lulo-Bold";
+      font-size: x-large;
+      color: #d13d67;
+      margin-bottom: 30px;
+      text-align: center;
+      margin: none;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+    &__subtitle {
+      font-family: "Lulo";
+      color: #d13d67;
+      margin-bottom: 30px;
+      text-align: center;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+    &__container {
+      display: flex;
+      gap: 2rem;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+    &__item {
+      background-color: #d13d67;
+      color: white;
+      padding: 3rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        background-color: #d13d3d;
+      }
+      h3 {
+        font-family: "Lulo";
+        text-align: center;
+        user-select: none;
       }
     }
   }
@@ -661,8 +718,8 @@ export const HomePageStyleWrapper = styled.div`
     }
 
     .hero-section h1 {
-      font-size: x-large;
-      line-height: 1.75rem;
+      font-size: large;
+      line-height: 1.5rem;
       text-align: left;
       margin: 0;
     }

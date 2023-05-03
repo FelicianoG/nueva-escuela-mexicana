@@ -121,10 +121,11 @@ export const SideBar = ({ setPortalOpen }: Props) => {
           <div onClick={() => handleNEM()} className="navbar__nem-container">
             <img src={flor} alt="logo flor"></img>
             <div className="navbar__nem-text">
-              <h1 className="navbar__nem">Nueva</h1>
-              <h1 className="navbar__nem">Escuela</h1>
-              <h1 className="navbar__nem">Mexicana</h1>
-              <h2 className="navbar__en-sonora">En Sonora</h2>
+              <h1 className="navbar__nem">Educación para</h1>
+              <h1 className="navbar__nem">la transformación</h1>
+
+              <h2 className="navbar__en-sonora">Programa sectorial</h2>
+              <h2 className="navbar__en-sonora">2022-2027</h2>
             </div>
           </div>
           <ul className="navbar__list">

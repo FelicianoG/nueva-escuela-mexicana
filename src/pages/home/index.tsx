@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HomePageStyleWrapper } from "./styles";
 import flor from "../../assets/NEM-flor-icon.svg";
+import florencia from "../../assets/NEM-flor-icon-pasada-01.svg";
 import flor2 from "../../assets/NEM-flor-icon2.svg";
 import florHero from "../../assets/flor-hero.png";
 import conferencia1 from "../../assets/conferencias/1.jpeg";
@@ -25,6 +26,8 @@ import Conferencista from "./components/Conferencista";
 import Table from "../../components/Table";
 import { capacitaciones, proyeccion } from "./utils";
 import creson from "../../assets/creson.png";
+import SEC from "../../assets/documentos/SEC-PMP-2022-2027-CE.pdf";
+import SEES from "../../assets/documentos/SEES-PMP-2022-2027-CE.pdf";
 
 type Props = {};
 
@@ -62,10 +65,10 @@ export default function Home({}: Props) {
 
       <header className="header">
         <div onClick={() => handleNEM()} className="header__nem">
-          <h1>Nueva</h1>
-          <h1>Escuela</h1>
-          <h1>Mexicana</h1>
-          <h2>En Sonora</h2>
+          <h1>Educación para</h1>
+          <h1>la transformación</h1>
+          <h2>Programa sectorial</h2>
+          <h2>2022-2027</h2>
         </div>
         <div className={scrollPosition > 200 ? "header__background" : "header__background header__background--transparent"}></div>
         <img onClick={() => handleFlower()} className="header__logo" src={flor} />
@@ -74,16 +77,16 @@ export default function Home({}: Props) {
         <div className="hero-section__container">
           <div className="hero-section__hero-title">
             <div className="hero-section__nem">
-              <h1>Nueva</h1>
-              <h1>Escuela</h1>
-              <h1>Mexicana</h1>
-              <h2>En Sonora</h2>
+              <h1>Educación para</h1>
+              <h1>la transformación</h1>
+              <h2>Programa sectorial</h2>
+              <h2>2022-2027</h2>
             </div>
-            <img className="hero-section__logo-span" src={flor}></img>
           </div>
           <div className="hero-section__description">
             <p>
-              Educación basada en el respeto irrestricto de la dignidad de las personas, con un enfoque de derechos humanos y de igualdad sustantiva.
+              Pensar, sentir y vivir la escuela como territorio común de cooperación e integración regional para la formación integral, humana y
+              colectiva, que oriente la emancipación y el bienestar de las comunidades, la región, la nación y del entorno planetario.
             </p>
           </div>
           {/* <a href="https://nuevaescuelamexicana.sep.gob.mx/" className="hero-section__btn">
@@ -97,6 +100,27 @@ export default function Home({}: Props) {
       <section className="rutas-section">
         <Rutas></Rutas>
         <RutasMobil></RutasMobil>
+      </section>
+
+      <section className="infografias">
+        <h1 className="infografias__title">Carteles para la transformación</h1>
+        <div className="infografias__image-container">
+          <img className="infografias__image" src={nemInfografia}></img>
+          <img className="infografias__image" src={rptInfografia}></img>
+          <img className="infografias__image" src={violentometroInfografia}></img>
+        </div>
+      </section>
+      <section className="documentos">
+        <h1 className="documentos__title">DOCUMENTOS NORMATIVOS</h1>
+        <h2 className="documentos__subtitle">“EDUCACIÓN PARA LA TRANSFORMACIÓN 2022-2027”</h2>
+        <div className="documentos__container">
+          <a download="Programa Sectorial" href={SEC} className="documentos__item">
+            <h3>Programa Sectorial</h3>
+          </a>
+          <a download="Programa Institucional" href={SEES} className="documentos__item">
+            <h3>Programa Institucional</h3>
+          </a>
+        </div>
       </section>
       <section className="video-section">
         <div className="video-section__container">
@@ -123,15 +147,14 @@ export default function Home({}: Props) {
           ></iframe> */}
         </div>
       </section>
-      <section className="infografias">
-        <h1 className="infografias__title">Carteles para la transformación</h1>
-        <div className="infografias__image-container">
-          <img className="infografias__image" src={nemInfografia}></img>
-          <img className="infografias__image" src={rptInfografia}></img>
-          <img className="infografias__image" src={violentometroInfografia}></img>
-        </div>
-      </section>
+
       <section className="conferencias-section">
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <img style={{ width: "3rem", marginRight: "1rem" }} src={florencia}></img>
+          <h1 style={{ fontSize: "30px", lineHeight: "2rem", textAlign: "center" }} className="conferencias-section__title">
+            Nueva escuela mexicana en sonora
+          </h1>
+        </div>
         <div className="conferencias-section__title">
           <h1>Programa de Conferencias Magistrales</h1>
         </div>

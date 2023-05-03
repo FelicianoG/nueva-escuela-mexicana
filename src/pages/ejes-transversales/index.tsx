@@ -27,10 +27,10 @@ export default function EjesTransversales() {
     <CampoStyleWrapper>
       <header className="header">
         <div onClick={() => navigate("/")} className="header__nem">
-          <h1>Nueva</h1>
-          <h1>Escuela</h1>
-          <h1>Mexicana</h1>
-          <h2>En Sonora</h2>
+          <h1>Educación para</h1>
+          <h1>la transformación</h1>
+          <h2>Programa sectorial</h2>
+          <h2>2022-2027</h2>
         </div>
         <div className="header__background"></div>
         <img onClick={() => handleFlower()} className="header__logo" src={flor} />
