@@ -8,11 +8,17 @@ import imagenSoyImportante from "./assets/genero/imagenSoyImportante.png";
 import imagenProyectoVida from "./assets/genero/imagenProyectoVida.png";
 import imagenConvocatorias from "./assets/genero/imagenConvocatorias.png";
 import imagenAcoso from "./assets/genero/imagenAcoso.png";
-import matenteReal from "./assets/salud/mantenteReal.png";
 import oasisEscolar from "./assets/medio-ambiente/oasisEscolares.png";
+import corresponsabilidad from "./assets/medio-ambiente/corresponsabilidad.png";
 import interculturalidad from "./assets/interculturalidad/interculturalidad.png";
 import trucha from "./assets/ciudadania/trucha.png";
 import escuelas from "./assets/ciudadania/escuelas.png";
+import consejos from "./assets/ciudadania/consejos.png";
+import mantenteReal from "./assets/salud/mantenteReal.png";
+import ambientes from "./assets/salud/ambientes.png";
+import nutricion from "./assets/salud/nutricion.png";
+import capsulas from "./assets/salud/capsulas.png";
+import prevencion from "./assets/salud/prevencion.png";
 
 export const EJES_ARTICULADORES: any = {
   Inclusión:
@@ -93,12 +99,37 @@ export const EJES_TRANSVERSALES: any = {
   ],
   "Vida saludable, impulso al deporte y prevención de adicciones": [
     [
+      "PROGRAMA INTEGRAL DE PREVENCIÓN Y FORMACIÓN EDUCATIVA",
+      "Programa enfocado en fortalecer a la comunidad educativa en materia de prevención de la violencia, atendiendo los factores de riesgo que la generan, impulsando una cultura de la paz. Contribuir a fortalecer la prevención social de la violencia para incidir en las causas y factores que la generan, enfocado a la reconstrucción del tejido social. ",
+      prevencion,
+    ],
+    [
       "Mantente Real",
       "Utilizar las estrategias Rechazar, Explicar, Alejarse o No Ir, Levantarse o Irse (REAL) para enseñar a los estudiantes cómo decir NO a los ofrecimientos de sustancias como alcohol, tabaco y otras drogas de una forma práctica y fácil. ",
-      matenteReal,
+      mantenteReal,
+    ],
+    [
+      "Ambientes deportivos",
+      "Optimizar las horas de descarga curricular en comunidad escolar a través de los ambientes deportivos. Reubicar las horas de descarga curricular en escuelas donde se requiera a través de la implementación de ambientes deportivos. Dar seguimiento y vinculación institucional. Promoción y difusión de vida saludable a través de la actividad física y deporte. Fomentar la participación de los padres de familia encomunidad escolar. Establecer vínculos permanentes a través de convenios garanticen la relación con escuelas de nivel superior áreas a fines a Educación Física, Ciencias de la ActiviFísica, Deporte y Entrenamiento Deportivo a través de prácticas o servicio social de los estudiantes, fortalecer las acciones de su desarrollo profesional.Gestión de recurso para horas de descarga en ambiendeportivos. ",
+      ambientes,
+    ],
+    [
+      "Nutrición en la comunidad escolar",
+      "Fortalecer hábitos nutricionales en la comunidad escolar del Estado de Sonora. Fomentar la vida saludable mediante talleresconcientización nutricional en la comunidad escolar.Contribuir en la prevención y atención de casosdesnutrición y obesidad, con la finalidad de mejorar parámetros de composición corporal de los estudiantes. Convenios con universidades que ofrezcan prestadoresservicio social o prácticas profesionales de Licenciaten nutrición. ",
+      capsulas,
+    ],
+    [
+      "Cápsulas deportivas",
+      "Difundir la cultura física y deporte de la comunidad escolar al contexto social a través de espacios televisivos.Fortalecer la imagen del profesor de educación Física. Dar seguimiento al Plan Anual de Trabajo (PAT) del Profede Educación Física del Estado de Sonora. Valorización del Magisterio.",
+      nutricion,
     ],
   ],
   "Medio ambiente, sustentabilidad y territorio": [
+    [
+      "CORRRESPONSABILIDAD SOCIAL EN EL ESTADO",
+      "Programa enfocado en promover Programas y Acciones en materia de Conciencia Ambiental a través de la Corresponsabilidad Social, con el sector público, privado, universitario y de la sociedad civil para el cuidado del medio ambiente. Impulsar una formación ciudadana de conciencia ambiental.  ",
+      corresponsabilidad,
+    ],
     [
       "Oasis escolares",
       "Identificar diversas experiencias de los y las estudiantes acerca de los significados que le dan al ecosistema en el que viven, con el fin de desarrollar propuestas para la mejora del medio ambiente escolar, familiar y regional. ",
@@ -107,6 +138,11 @@ export const EJES_TRANSVERSALES: any = {
   ],
   Interculturalidad: [["Intercambio Académico", "Transformando la Educación Indígena. Planes y programas 2022", interculturalidad]],
   "Ciudadanía para una participación democrática": [
+    [
+      "CONSEJOS DE PARTICIPACIÓN ESCOLAR Y COMITÉS PARTICIPATIVOS DE SALUD ESCOLAR",
+      "Programa enfocado en promover la participación social y ciudadana en los centros educativos del estado de Sonora. Promover la conformación y seguimiento a las acciones de los Consejos de Participación Escolar y Comités Participativos de Salud Escolar; impulsando el sentido de pertenencia y la participación social y ciudadana. ",
+      consejos,
+    ],
     [
       "Trucha con mi escuela",
       "Promover y coordinar acciones con la Secretaría de Seguridad para vigilar, cuidar y proteger los inmuebles escolares en los períodos de descanso escolar. ",
@@ -122,7 +158,7 @@ export const EJES_TRANSVERSALES: any = {
     [
       "Mantente Real",
       "Utilizar las estrategias Rechazar, Explicar, Alejarse o No Ir, Levantarse o Irse (REAL) para enseñar a los estudiantes cómo decir NO a los ofrecimientos de sustancias como alcohol, tabaco y otras drogas de una forma práctica y fácil. ",
-      matenteReal,
+      mantenteReal,
     ],
   ],
 };
