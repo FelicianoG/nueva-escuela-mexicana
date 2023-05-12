@@ -19,6 +19,8 @@ import ambientes from "./assets/salud/ambientes.png";
 import nutricion from "./assets/salud/nutricion.png";
 import capsulas from "./assets/salud/capsulas.png";
 import prevencion from "./assets/salud/prevencion.png";
+import escuelasArte from "./assets/arte/escuelas.png";
+import convive from "./assets/arte/convive.jpg";
 
 export const EJES_ARTICULADORES: any = {
   Inclusión:
@@ -47,6 +49,18 @@ export const EJES_VIDEOS: any = {
 };
 
 export const EJES_TRANSVERSALES: any = {
+  "Artes y experiencias estéticas": [
+    [
+      "Escuelas para la transformación",
+      "Fortalecer la capacidad de las escuelas secundarias de Sonora con relación a la convivencia, la prevención de las violencias y del abandono escolar, la mejora de los ambientes de aprendizaje y la ciudadanía digital, así como la integración del deporte y la cultura artística en la formación.",
+      escuelasArte,
+    ],
+    [
+      "Convive",
+      "Mejorar la convivencia escolar de las Instituciones Educativas de Sonora, a través del desarrollo de habilidades que le permitan al estudiante resolver conflictos de manera colaborativa a partir de diversas actividades que promueven la participación constante de los participantes en cada una de las secuencias didácticas diseñadas para propiciar aprendizajes funcionales, significativos y situados.",
+      convive,
+    ],
+  ],
   "Ciencia, Tecnología y Sociedad del Futuro": [
     [
       "Asignatura Educatrónica",

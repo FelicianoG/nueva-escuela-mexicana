@@ -97,7 +97,13 @@ export default function Rutas({}: Props) {
   return (
     <RutasStyles id="rutas">
       <img className="escuelas" src={escuelas}></img>
-      <img className="mini-images arte" src={arte}></img>
+      <img
+        onClick={() => {
+          navigate(`/ejes-transversales/Artes%20y%20experiencias%20estéticas`);
+        }}
+        className="mini-images arte"
+        src={arte}
+      ></img>
       <img
         onClick={() => {
           navigate(`/ejes-transversales/Perspectiva%20de%20Género,%20Cuerpo%20y%20Sexualidades`);
