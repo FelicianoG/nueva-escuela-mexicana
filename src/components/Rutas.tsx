@@ -99,7 +99,7 @@ export default function Rutas({}: Props) {
       <img className="escuelas" src={escuelas}></img>
       <img
         onClick={() => {
-          navigate(`/ejes-transversales/Artes%20y%20experiencias%20estéticas`);
+          navigate(`/ejes-transversales/Expresión%20artística,%20creatividad%20y%20habilidades%20socioemocionales`);
         }}
         className="mini-images arte"
         src={arte}
