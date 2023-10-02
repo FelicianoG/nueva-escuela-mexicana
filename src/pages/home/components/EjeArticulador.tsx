@@ -13,21 +13,22 @@ const EjeArticuladorStyles = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
   margin: 1.5rem 0;
   border-radius: 10px;
-  min-width: 300px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
   }
+
   .eje-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
   }
+
   .title {
     font-family: Lulo-Bold;
     margin-left: 1.5rem;

@@ -121,7 +121,8 @@ export const HomePageStyleWrapper = styled.div`
       color: white;
       max-width: 30rem;
       margin-bottom: 30px;
-      text-align: justify;
+      text-align: left;
+      line-height: 1.4;
       letter-spacing: 0.1rem;
     }
     &__btn {
@@ -233,6 +234,57 @@ export const HomePageStyleWrapper = styled.div`
       height: 400px;
       align-self: flex-end;
       justify-self: flex-end;
+    }
+  }
+  .docentes {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    gap: 40px;
+    /* padding: 30px; */
+    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    border-top: white 5px solid;
+
+    &__title {
+      font-family: "Lulo-Bold";
+      font-size: 1.4rem;
+      max-width: 600px;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      @media (max-width: 400px) {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+      }
+    }
+
+    &__image-container-row {
+      width: 100%;
+      max-height: 200px;
+      margin-bottom: 100px;
+    }
+    &__image-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+      gap: 40px;
+    }
+    &__image {
+      max-height: 20vw;
+      @media (max-width: 800px) {
+        max-width: 80%;
+        max-height: unset;
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
     }
   }
   .infografias {
@@ -519,7 +571,7 @@ export const HomePageStyleWrapper = styled.div`
       line-height: 1.5rem;
       max-width: 40rem;
       margin-bottom: 30px;
-      text-align: justify;
+      text-align: center;
       letter-spacing: 0.1rem;
     }
     &__logo {
@@ -591,6 +643,7 @@ export const HomePageStyleWrapper = styled.div`
       justify-content: center;
       align-items: center;
       margin-bottom: 1.5rem;
+      text-overflow: hidden;
     }
     &__ejes {
       display: flex;

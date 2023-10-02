@@ -3,14 +3,8 @@ export const capacitaciones = [
   [
     ["Matemáticas constructivistas para elemental y  preescolar", "SEC"],
     ["Foro: “De la Mano por la Inclusión” ", "Sría. de Salud y UNISON"],
-    [
-      "Taller de formación continua y consejo técnico - primarias - (Primer esbozo de programa analítico)",
-      "Consejos Técnicos",
-    ],
-    [
-      "Taller de formación continua y consejo técnico - secundarias - (Resolución de dudas)",
-      "Consejos Técnicos",
-    ],
+    ["Taller de formación continua y consejo técnico - primarias - (Primer esbozo de programa analítico)", "Consejos Técnicos"],
+    ["Taller de formación continua y consejo técnico - secundarias - (Resolución de dudas)", "Consejos Técnicos"],
     [
       "Taller para la Educación de los Derechos Sexuales y reproductivos de Niñas, Niños, Adolescentes y Jóvenes con Discapacidad Desde el Enfoque de los Derechos Humanos",
       "SEC",

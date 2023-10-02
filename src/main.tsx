@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import CamposFormativos from "./pages/campos-formativos";
 import EjesArticuladores from "./pages/ejes-articuladores";
 import EjesTransversales from "./pages/ejes-transversales";
+import DocentesSonorenses from "./pages/docentes-sonorenses";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: ":campo",
+        element: <h1>example page</h1>,
+      },
+    ],
+  },
+  {
+    path: "/docentes-sonorenses",
+    element: <DocentesSonorenses />,
+    errorElement: <h1>Error Page</h1>,
+    children: [
+      {
+        path: ":docente",
         element: <h1>example page</h1>,
       },
     ],

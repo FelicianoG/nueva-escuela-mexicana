@@ -1,37 +1,46 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { HomePageStyleWrapper } from "./styles";
-import flor from "../../assets/NEM-flor-icon.svg";
-import florencia from "../../assets/NEM-flor-icon-pasada-01.svg";
-import flor2 from "../../assets/NEM-flor-icon2.svg";
-import florHero from "../../assets/flor-hero.png";
-import conferencia1 from "../../assets/conferencias/1.jpeg";
-import conferencia2 from "../../assets/conferencias/2.jpeg";
-import conferencia3 from "../../assets/conferencias/3.jpeg";
-import conferencia4 from "../../assets/conferencias/4.jpg";
-import conferencia5 from "../../assets/conferencias/5.jpg";
-import comunidadImg from "../../assets/comunidad.png";
 import { CampoFormativo } from "./components/CampoFormativo";
 import { EjeArticulador } from "./components/EjeArticulador";
-import logoSec from "../../assets/Sec-logos/logo-sec.png";
-import logoDGIDT from "../../assets/Sec-logos/logo-dgidt.png";
-import logoGobson from "../../assets/Sec-logos/logo-gobson.png";
 import Portal from "../../components/Portal";
 import { SideBar } from "../../components/SideBar";
-import nemInfografia from "../../assets/infografias/NEM-FLOR.jpeg";
-import rptInfografia from "../../assets/infografias/NEM-RPT.jpeg";
-import violentometroInfografia from "../../assets/infografias/Violentometro.jpeg";
 import Rutas from "../../components/Rutas";
 import RutasMobil from "../../components/RutasMobil";
 import Conferencista from "./components/Conferencista";
 import Table from "../../components/Table";
 import { capacitaciones, proyeccion } from "./utils";
-import creson from "../../assets/creson.png";
-import SEC from "../../assets/documentos/SEC-PMP-2022-2027-CE.pdf";
-import SEES from "../../assets/documentos/SEES-PMP-2022-2027-CE.pdf";
+import { homeAssets } from "./homeAssets";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import Walters from "../../assets/docentes/Walters.jpg";
+import Dania from "../../assets/docentes/Dania.jpg";
+import Kristy from "../../assets/docentes/Kristy.jpg";
+import Olga from "../../assets/docentes/Olga.jpg";
+import Paul from "../../assets/docentes/Paul.jpg";
 
-type Props = {};
+const {
+  flor,
+  florencia,
+  flor2,
+  florHero,
+  conferencia1,
+  conferencia2,
+  conferencia3,
+  conferencia4,
+  conferencia5,
+  comunidadImg,
+  logoSec,
+  logoDGIDT,
+  logoGobson,
+  nemInfografia,
+  rptInfografia,
+  violentometroInfografia,
+  creson,
+  SEC,
+  SEES,
+} = homeAssets;
 
-export default function Home({}: Props) {
+export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [portalOpen, setPortalOpen] = useState(false);
   function handleFlower() {
@@ -97,19 +106,29 @@ export default function Home({}: Props) {
           <img className="hero-section__flor" src={florHero} />
         </div>
       </section>
-      <section className="rutas-section">
+
+      {/* <section className="rutas-section">
         <Rutas></Rutas>
         <RutasMobil></RutasMobil>
+      </section> */}
+
+      <section className="docentes">
+        <h1 className="docentes__title">Conoce a los docentes Sonorenses de la NEM</h1>
+        <div className="docentes__image-container">
+          <div className="docentes__image-container-row">
+            <DocentesHolder></DocentesHolder>
+          </div>
+        </div>
       </section>
 
-      <section className="infografias">
+      {/* <section className="infografias">
         <h1 className="infografias__title">Carteles para la transformación</h1>
         <div className="infografias__image-container">
           <img className="infografias__image" src={nemInfografia}></img>
           <img className="infografias__image" src={rptInfografia}></img>
           <img className="infografias__image" src={violentometroInfografia}></img>
         </div>
-      </section>
+      </section> */}
       <section className="documentos">
         <h1 className="documentos__title">DOCUMENTOS NORMATIVOS</h1>
         <h2 className="documentos__subtitle">“EDUCACIÓN PARA LA TRANSFORMACIÓN 2022-2027”</h2>
@@ -221,7 +240,7 @@ export default function Home({}: Props) {
           <Table rows={proyeccion} headerColor="#d13d67" />
         </div>
       </section>
-      <section className="community-section">
+      {/* <section className="community-section">
         <div className="community-section__decoration"></div>
         <div className="community-section__decoration-two"></div>
         <div className="community-section__container">
@@ -237,7 +256,7 @@ export default function Home({}: Props) {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="campos-formativos">
         <div className="campos-formativos__container">
           <div className="campos-formativos__title-container">
@@ -306,3 +325,184 @@ export default function Home({}: Props) {
     </HomePageStyleWrapper>
   );
 }
+
+const DocentesHolder = () => {
+  const [order, setOrder] = useState(9002);
+  const navigate = useNavigate();
+  const options = ["one", "two", "three", "four", "five"];
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  // the required distance between touchStart and touchEnd to be detected as a swipe
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: any) => {
+    setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: any) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe || isRightSwipe) {
+      // add your conditional logic here
+      isLeftSwipe && setOrder((prev) => prev - 1);
+      isRightSwipe && setOrder((prev) => prev + 1);
+    }
+  };
+  return (
+    <Docentes>
+      <div
+        onClick={() => {
+          setOrder((prev) => prev - 1);
+        }}
+        className="backward"
+      ></div>
+
+      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[order % 5]}`}>
+        <img src={Walters}></img>
+        <div
+          onClick={() => {
+            navigate("/docentes-sonorenses/German Walters Meraz");
+          }}
+          className="play-btn"
+        ></div>
+      </div>
+      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 1) % 5]}`}>
+        <img src={Dania}></img>
+        <div
+          onClick={() => {
+            console.log("first");
+          }}
+          className="play-btn"
+        ></div>
+      </div>
+      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 2) % 5]}`}>
+        <img src={Kristy}></img>
+        <div
+          onClick={() => {
+            console.log("first");
+          }}
+          className="play-btn"
+        ></div>
+      </div>
+      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 3) % 5]}`}>
+        <img src={Olga}></img>
+        <div
+          onClick={() => {
+            console.log("first");
+          }}
+          className="play-btn"
+        ></div>
+      </div>
+      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 4) % 5]}`}>
+        <img src={Paul}></img>
+        <div
+          onClick={() => {
+            console.log("first");
+          }}
+          className="play-btn"
+        ></div>
+      </div>
+      <div
+        onClick={() => {
+          setOrder((prev) => prev + 1);
+        }}
+        className="forward"
+      ></div>
+    </Docentes>
+  );
+};
+const Docentes = styled.div`
+  position: relative;
+  min-height: 280px;
+  min-width: 500px;
+  @media (max-width: 800px) {
+    transform: scale(0.6);
+    min-width: 200px;
+  }
+  img {
+    width: 100%;
+  }
+  .backward {
+    position: absolute;
+    z-index: 9;
+    left: -20%;
+    height: 100%;
+    width: 20%;
+  }
+  .forward {
+    position: absolute;
+    z-index: 9;
+    right: -20%;
+    height: 100%;
+    width: 20%;
+  }
+  .play-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    width: 40px;
+    opacity: 0;
+    height: 40px;
+    border-radius: 100%;
+    background-color: red;
+    z-index: 7;
+  }
+  .card {
+    box-shadow: 0px 10px 10px 10px #00000020;
+    font-size: 100px;
+    position: absolute;
+    width: 100%;
+
+    background-color: #ffffff;
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .one {
+    transform: translateX(-110px) scale(0.9);
+    z-index: 1;
+    transition: all 0.8s;
+  }
+  .two {
+    transform: translateX(-60px) scale(0.96);
+    z-index: 2;
+    transition: all 0.8s;
+  }
+  .three {
+    z-index: 3;
+    transition: all 0.8s;
+  }
+  .four {
+    transform: translateX(60px) scale(0.96);
+    z-index: 2;
+    transition: all 0.8s;
+  }
+  .five {
+    transform: translateX(110px) scale(0.9);
+    z-index: 1;
+    transition: all 0.8s;
+  }
+
+  /* .animation-oneToTwo {
+    animation: oneToTwo 1s ease-in-out;
+  }
+
+  @keyframes oneToTwo {
+    0% {
+      right: 0;
+    }
+    50% {
+      right: 100%;
+    }
+    100% {
+      right: 0;
+    }
+  } */
+`;
