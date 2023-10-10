@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import Camara from "../../assets/conferencias/camara/dr-camara.png";
 
 export const HomePageStyleWrapper = styled.div`
   position: relative;
+  overflow-x: hidden;
+
   iframe {
     width: 50vw;
     height: calc(50vw * 0.56);
@@ -33,7 +36,7 @@ export const HomePageStyleWrapper = styled.div`
       top: 0;
       left: 0;
       background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
-      height: 4rem;
+      height: 4.2rem;
       width: 100%;
       transition: opacity 1s;
       opacity: 100%;
@@ -50,7 +53,7 @@ export const HomePageStyleWrapper = styled.div`
     }
     &__nem {
       z-index: 4;
-      margin: 0 0 4px 3rem;
+      margin: 12px 0 4px 3rem;
       cursor: pointer;
     }
     &__nem h1 {
@@ -75,8 +78,6 @@ export const HomePageStyleWrapper = styled.div`
     background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
     width: 100%;
     height: 500px;
-
-    overflow-x: hidden;
 
     &__nem {
       color: white;
@@ -154,6 +155,213 @@ export const HomePageStyleWrapper = styled.div`
       justify-self: flex-end;
     }
   }
+  .camara-section {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    width: 100%;
+    padding: 6rem 0;
+
+    .content {
+      border-radius: 2rem;
+      background-color: #fff;
+      box-shadow: 1rem 1rem 0.2rem 0.2rem #00000040;
+      padding: 3rem;
+      box-sizing: border-box;
+      max-width: 760px;
+      display: flex;
+      align-items: center;
+      width: 70%;
+      .text-container {
+        flex: 1;
+        padding-right: 1rem;
+        max-width: 30rem;
+        font-size: 1.2rem;
+        font-family: "Lulo-Bold";
+        color: rgba(158, 0, 93, 1);
+        line-height: 1.8rem;
+        .decoration {
+          min-height: 3px;
+          width: 100%;
+          background-color: rgba(211, 100, 74, 1);
+          margin: 1rem 0;
+        }
+        > h2 {
+          margin: 0 0 0.8rem;
+          font-family: "Lulo";
+        }
+        > h1 {
+          font-size: x-large;
+          color: rgba(211, 100, 74, 1);
+          margin-bottom: 1.2rem;
+          line-height: 2.2rem;
+        }
+      }
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+
+        .image {
+          background-image: ${"url(" + Camara + ")"};
+          background-position-x: 45%;
+          background-size: cover;
+          min-width: 260px;
+          min-height: 260px;
+          border-radius: 100%;
+          border: rgba(211, 100, 74, 1) solid 0.8rem;
+          background-color: rgba(158, 0, 93, 1);
+        }
+      }
+    }
+    .logos {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 70%;
+      max-width: 720px;
+      margin-top: 5rem;
+
+      .conafe {
+        width: clamp(100px, 20vw, 230px);
+      }
+      .sep {
+        width: clamp(100px, 20vw, 230px);
+      }
+      .sec {
+        width: clamp(100px, 16vw, 160px);
+      }
+    }
+    @media (max-width: 800px) {
+      .content {
+        transform: scale(0.9);
+        margin-top: 2rem;
+        padding: 3rem 3rem 1rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        text-align: center;
+
+        .text-container {
+          transform: translateY(-60px);
+          flex: 1;
+          padding-right: 1rem;
+          max-width: 30rem;
+          font-size: 0.8rem;
+          font-family: "Lulo-Bold";
+          color: rgba(158, 0, 93, 1);
+          line-height: 1.2rem;
+
+          .decoration {
+            display: none;
+          }
+          > h2 {
+            margin: 0 0 0.8rem;
+            font-family: "Lulo";
+          }
+
+          > h1 {
+            font-size: large;
+            background-color: rgba(211, 100, 74, 1);
+            box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #33333330;
+            border-radius: 1rem;
+            padding: 1rem;
+            color: white;
+            margin-bottom: 1.2rem;
+            line-height: 1.8rem;
+          }
+        }
+        .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 0;
+          .image {
+            transform: translateY(-90px);
+            background-image: ${"url(" + Camara + ")"};
+            background-position-x: 45%;
+            background-size: cover;
+            min-width: 200px;
+            min-height: 200px;
+            border-radius: 100%;
+            border: rgba(211, 100, 74, 1) solid 0.8rem;
+            background-color: rgba(158, 0, 93, 1);
+          }
+        }
+      }
+      .logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 100px;
+        width: 70%;
+        max-width: 720px;
+        margin: 2rem 0;
+        .conafe {
+          width: 200px;
+        }
+        .sep {
+          margin: 2rem 0;
+          width: 200px;
+        }
+        .sec {
+          margin: 2rem 0;
+          width: 200px;
+        }
+      }
+    }
+  }
+  .conferencias-section {
+    display: flex;
+    font-size: small;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    gap: 40px;
+    padding: 30px;
+    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    border-top: white 5px solid;
+    padding-top: clamp(2rem, 20vw, 10rem);
+    padding-bottom: clamp(2rem, 20vw, 10rem);
+
+    &__title {
+      font-size: small;
+      font-family: "Lulo-Bold";
+      text-align: center;
+      color: white;
+      line-height: 25px;
+      :first-of-type {
+        font-size: x-large;
+        line-height: 2rem;
+        text-align: center;
+      }
+    }
+    .flor-icon {
+      width: 3rem;
+      margin-right: 1rem;
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+    &__container {
+      display: flex;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+  }
+
   .rutas-section {
     position: relative;
     display: flex;
@@ -428,33 +636,7 @@ export const HomePageStyleWrapper = styled.div`
       letter-spacing: 0.1rem;
     }
   }
-  .conferencias-section {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 700px;
-    gap: 40px;
-    padding: 30px;
-    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
-    border-top: white 5px solid;
-    padding-top: clamp(2rem, 20vw, 10rem);
-    padding-bottom: clamp(2rem, 20vw, 10rem);
-    &__title {
-      font-family: "Lulo-Bold";
-      text-align: center;
-      color: white;
-      line-height: 25px;
-    }
-    &__container {
-      display: flex;
-      @media (max-width: 800px) {
-        flex-direction: column;
-      }
-    }
-  }
+
   .community-section {
     position: relative;
     display: flex;
@@ -831,7 +1013,15 @@ export const HomePageStyleWrapper = styled.div`
       width: 100%;
       height: 700px;
       overflow-x: hidden;
-
+      @media (max-width: 500px) {
+        height: 660px;
+        &__flor {
+          width: 100%;
+          height: unset;
+          align-self: flex-end;
+          justify-self: flex-end;
+        }
+      }
       &___nem {
         width: 100%;
       }

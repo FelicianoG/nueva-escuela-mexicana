@@ -7,16 +7,23 @@ import { SideBar } from "../../components/SideBar";
 import Rutas from "../../components/Rutas";
 import RutasMobil from "../../components/RutasMobil";
 import Conferencista from "./components/Conferencista";
-import Table from "../../components/Table";
-import { capacitaciones, proyeccion } from "./utils";
+// import Table from "../../components/Table";
+// import { capacitaciones, proyeccion } from "./utils";
 import { homeAssets } from "./homeAssets";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import Walters from "../../assets/docentes/Walters.jpg";
-import Dania from "../../assets/docentes/Dania.jpg";
-import Kristy from "../../assets/docentes/Kristy.jpg";
-import Olga from "../../assets/docentes/Olga.jpg";
-import Paul from "../../assets/docentes/Paul.jpg";
+import Walters from "../../assets/docentes/walters.jpg";
+import Dania from "../../assets/docentes/dania.jpg";
+import Kristy from "../../assets/docentes/krispy.jpg";
+import Olga from "../../assets/docentes/olga.jpg";
+import Paul from "../../assets/docentes/paul.jpg";
+import Carmen from "../../assets/docentes/carmen.jpg";
+import Fernanda from "../../assets/docentes/fernanda.jpg";
+import Viviana from "../../assets/docentes/viviana.jpg";
+import Conafe from "../../assets/Sec-logos/CONAFE.png";
+import sep from "../../assets/Sec-logos/LOGO_SEP_VERTICAL.png";
+import secWhite from "../../assets/Sec-logos/logo-sec-white.png";
+import { DOCENTES_NOMBRES } from "../docentes-sonorenses/constants";
 
 const {
   flor,
@@ -107,16 +114,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="rutas-section">
+      <section className="rutas-section">
         <Rutas></Rutas>
         <RutasMobil></RutasMobil>
-      </section> */}
+      </section>
 
       <section className="docentes">
         <h1 className="docentes__title">Conoce a los docentes Sonorenses de la NEM</h1>
         <div className="docentes__image-container">
           <div className="docentes__image-container-row">
-            <DocentesHolder></DocentesHolder>
+            <DocentesHolder optionsNumber={8}></DocentesHolder>
           </div>
         </div>
       </section>
@@ -166,80 +173,80 @@ export default function Home() {
           ></iframe> */}
         </div>
       </section>
+      <section className="camara-section">
+        <div className="content">
+          <div className="text-container">
+            <h2>Charla con</h2>
+            <div className="decoration"></div>
+            <h1>
+              Gabriel
+              <br />
+              Cámara Cervera
+            </h1>
+            <div className="decoration"></div>
+            <h2>Director General del Consejo Nacional de Fomento Educativo</h2>
+          </div>
+          <div className="image-container">
+            <div className="image"></div>
+          </div>
+        </div>
+        <div className="logos">
+          <img className="conafe" src={Conafe}></img>
+          <img className="sep" src={sep}></img>
+          <img className="sec" src={secWhite}></img>
+        </div>
+      </section>
 
       <section className="conferencias-section">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <img style={{ width: "3rem", marginRight: "1rem" }} src={florencia}></img>
-          <h1 style={{ fontSize: "30px", lineHeight: "2rem", textAlign: "center" }} className="conferencias-section__title">
-            Nueva escuela mexicana en sonora
-          </h1>
+          <img className="flor-icon" src={florencia}></img>
+          <h1 className="conferencias-section__title">Nueva escuela mexicana en sonora</h1>
         </div>
         <div className="conferencias-section__title">
           <h1>Programa de Conferencias Magistrales</h1>
         </div>
         <div className="conferencias-section__container">
           <Conferencista
-            titulo="El modelo de la nueva escuela mexicana"
-            imagen={conferencia1}
-            nombre="Dra. Rosa María Torres Hernández"
-            cargo="Universidad pedagógica nacional"
-          ></Conferencista>
-          <Conferencista
-            titulo="El complejo proyecto de la nueva escuela mexicana"
-            imagen={conferencia2}
-            nombre="Dr. Ángel Díaz-Barriga"
-            cargo="Universidad Autónoma de México"
-            position={["-10px", "-30px"]}
-            imageSize="300px"
-          ></Conferencista>
-          <Conferencista
             titulo="“Bases metodológicas de la Nueva Escuela Mexicana” Secundaria"
             imagen={conferencia3}
-            nombre="Dra. Helga Patricia Frola Ruiz "
+            nombre="Helga Patricia Frola Ruiz "
             cargo="Centro de Investigación Educativa y Capacitación Institucional"
-            position={["6px", "0px"]}
+            position={[6, 0]}
             imageSize="190px"
           ></Conferencista>
-        </div>
-      </section>
-
-      <section className="conferencias-section">
-        <div className="conferencias-section__title">
-          <h1>Eventos: Educación Media Superior</h1>
-        </div>
-        <div className="conferencias-section__container">
           <Conferencista
             titulo="Conferencia magistral:
             “Interculturalidad Crítica en la Nueva Escuela Mexicana”"
             imagen={conferencia5}
-            nombre="Dra. Sonia Comboni"
+            nombre="Sonia Comboni"
             cargo="Universidad Autónoma Metropolitana"
-            position={["-340px", "-70px"]}
+            position={[-340, -70]}
             imageSize="800px"
           ></Conferencista>
           <Conferencista
             titulo="Taller:
             “Cultura Digital y Educación Media Superior”"
             imagen={conferencia4}
-            nombre="Dr. Alberto Ramírez Martinell"
+            nombre="Alberto Ramírez Martinell"
             cargo="Universidad Veracruzana"
-            position={["-60px", "-10px"]}
+            position={[-60, -10]}
             imageSize="280px"
           ></Conferencista>
         </div>
       </section>
-      <section className="capacitaciones-section">
+
+      {/* <section className="capacitaciones-section">
         <h1>Capacitaciones ofrecidas en educación básica en el marco de la NEM</h1>
         <Table rows={capacitaciones} headerColor="#d13d67" />
-      </section>
-      <section className="capacitaciones-section">
+      </section> */}
+      {/* <section className="capacitaciones-section">
         <img className="creson" src={creson} alt="logo creson"></img>
         <h1>PROYECCIÓN DE CAPACITACIÓN AL PERSONAL EDUCATIVO 2023-2024</h1>
         <h2>“Fortalecimiento Pedagógico en el marco de la Nueva Escuela Mexicana”</h2>
         <div>
           <Table rows={proyeccion} headerColor="#d13d67" />
         </div>
-      </section>
+      </section> */}
       {/* <section className="community-section">
         <div className="community-section__decoration"></div>
         <div className="community-section__decoration-two"></div>
@@ -307,7 +314,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-
       <footer className="footer">
         <div className="footer__division"></div>
         <div className="footer__container">
@@ -326,10 +332,14 @@ export default function Home() {
   );
 }
 
-const DocentesHolder = () => {
+interface Props {
+  optionsNumber: number;
+}
+
+const DocentesHolder = ({ optionsNumber }: Props) => {
   const [order, setOrder] = useState(9002);
   const navigate = useNavigate();
-  const options = ["one", "two", "three", "four", "five"];
+  const options = ["one", "two", "three", "four", "five", "six", "seven", "eight"];
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
@@ -354,6 +364,7 @@ const DocentesHolder = () => {
       isRightSwipe && setOrder((prev) => prev + 1);
     }
   };
+  const filterNumber = 4;
   return (
     <Docentes>
       <div
@@ -363,49 +374,120 @@ const DocentesHolder = () => {
         className="backward"
       ></div>
 
-      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[order % 5]}`}>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${order % optionsNumber > filterNumber ? "back" : options[order % optionsNumber]}`}
+      >
         <img src={Walters}></img>
         <div
           onClick={() => {
-            navigate("/docentes-sonorenses/German Walters Meraz");
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Walters}`);
           }}
-          className="play-btn"
+          className={`${order % optionsNumber > filterNumber ? "backb" : "play-btn"}`}
         ></div>
       </div>
-      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 1) % 5]}`}>
+
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${(order + 1) % optionsNumber > filterNumber ? "card back" : options[(order + 1) % optionsNumber]}`}
+      >
         <img src={Dania}></img>
         <div
           onClick={() => {
-            console.log("first");
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Dania}`);
           }}
-          className="play-btn"
+          className={`${(order + 1) % optionsNumber > filterNumber ? "backb" : "play-btn"}`}
         ></div>
       </div>
-      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 2) % 5]}`}>
+
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${(order + 2) % optionsNumber > filterNumber ? "card back" : options[(order + 2) % optionsNumber]}`}
+      >
         <img src={Kristy}></img>
         <div
           onClick={() => {
-            console.log("first");
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Kristy}`);
           }}
-          className="play-btn"
+          className={`${(order + 2) % optionsNumber > filterNumber ? "backb" : "play-btn"}`}
         ></div>
       </div>
-      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 3) % 5]}`}>
+
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${(order + 3) % optionsNumber > filterNumber ? "card back" : options[(order + 3) % optionsNumber]}`}
+      >
         <img src={Olga}></img>
         <div
           onClick={() => {
-            console.log("first");
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Olga}`);
           }}
-          className="play-btn"
+          className={`${(order + 3) % optionsNumber > filterNumber ? "backb" : "play-btn"}`}
         ></div>
       </div>
-      <div onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} className={`card ${options[(order + 4) % 5]}`}>
+
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${(order + 4) % optionsNumber > filterNumber ? "card back" : options[(order + 4) % optionsNumber]}`}
+      >
         <img src={Paul}></img>
         <div
           onClick={() => {
-            console.log("first");
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Paul}`);
           }}
-          className="play-btn"
+          className={`${(order + 4) % optionsNumber > filterNumber ? "backb" : "play-btn"}`}
+        ></div>
+      </div>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${(order + 5) % optionsNumber > filterNumber ? "card back" : options[(order + 5) % optionsNumber]}`}
+      >
+        <img src={Viviana}></img>
+        <div
+          onClick={() => {
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Viviana}`);
+          }}
+          className={`${(order + 5) % optionsNumber > filterNumber ? "backb" : "play-btn"}`}
+        ></div>
+      </div>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${(order + 6) % optionsNumber > filterNumber ? "card back" : options[(order + 6) % optionsNumber]}`}
+      >
+        <img src={Fernanda}></img>
+        <div
+          onClick={() => {
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Fernanda}`);
+          }}
+          className={`${(order + 6) % optionsNumber > filterNumber ? "back" : "play-btn"}`}
+        ></div>
+      </div>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        className={`card ${(order + 7) % optionsNumber > filterNumber ? "card back" : "card " + options[(order + 7) % optionsNumber]}`}
+      >
+        <img src={Carmen}></img>
+        <div
+          onClick={() => {
+            navigate(`/docentes-sonorenses/${DOCENTES_NOMBRES.Carmen}`);
+          }}
+          className={`${(order + 7) % optionsNumber > filterNumber ? "back" : "play-btn"}`}
         ></div>
       </div>
       <div
@@ -421,6 +503,7 @@ const Docentes = styled.div`
   position: relative;
   min-height: 280px;
   min-width: 500px;
+
   @media (max-width: 800px) {
     transform: scale(0.6);
     min-width: 200px;
@@ -447,19 +530,24 @@ const Docentes = styled.div`
     bottom: 15px;
     right: 25px;
     width: 40px;
-    opacity: 0;
     height: 40px;
     border-radius: 100%;
-    background-color: red;
+    background-color: rgb(209, 61, 103);
     z-index: 7;
+    ::after {
+      color: white;
+      font-size: 1.6rem;
+      left: 11px;
+      top: 10px;
+      position: absolute;
+      content: "►";
+    }
   }
   .card {
     box-shadow: 0px 10px 10px 10px #00000020;
     font-size: 100px;
     position: absolute;
     width: 100%;
-
-    background-color: #ffffff;
     transition: all 1s;
     display: flex;
     justify-content: center;
@@ -489,20 +577,10 @@ const Docentes = styled.div`
     z-index: 1;
     transition: all 0.8s;
   }
-
-  /* .animation-oneToTwo {
-    animation: oneToTwo 1s ease-in-out;
+  .back {
+    display: none;
   }
-
-  @keyframes oneToTwo {
-    0% {
-      right: 0;
-    }
-    50% {
-      right: 100%;
-    }
-    100% {
-      right: 0;
-    }
-  } */
+  .backb {
+    transform: scale(5);
+  }
 `;

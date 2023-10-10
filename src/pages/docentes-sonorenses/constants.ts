@@ -40,3 +40,14 @@ export const VIDEO_DOCENTE: any = {
     descripcion: "Descripción del video pendiente",
   },
 };
+
+export const DOCENTES_NOMBRES = {
+  Carmen: "Carmen Isabel Vargas",
+  Fernanda: "Fernanda Alicia Aragón",
+  Dania: "Dania Marlenne Reyes",
+  Paul: "Paul Josafat Ramírez",
+  Viviana: "Viviana Bautista Mariscal",
+  Olga: "Olga Alicia Gastelum",
+  Kristy: "Kristy Nallely Zepeda",
+  Walters: "German Walters Meraz",
+};
