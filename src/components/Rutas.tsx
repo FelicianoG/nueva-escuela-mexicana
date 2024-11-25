@@ -9,6 +9,30 @@ import medioAmbiente from "../assets/rutas/medio-ambiente.png";
 import vidaSaludable from "../assets/rutas/vida-saludable.png";
 import { useNavigate } from "react-router-dom";
 
+export default function Rutas({ }: Props) {
+  const navigate = useNavigate();
+  return (
+    <RutasStyles id="rutas">
+      <img className="escuelas" src={escuelas}></img>
+
+      {ejes.map((eje, i) => {
+        return (
+          <img
+            key={i}
+            onClick={() => {
+              navigate(eje.url);
+            }}
+            className={`mini-images ${eje.name}`}
+            src={eje.image}
+          ></img>
+        )
+      })}
+
+    </RutasStyles >
+  );
+}
+
+
 type Props = {};
 
 const RutasStyles = styled.div`
@@ -92,60 +116,13 @@ const RutasStyles = styled.div`
   }
 `;
 
-export default function Rutas({}: Props) {
-  const navigate = useNavigate();
-  return (
-    <RutasStyles id="rutas">
-      <img className="escuelas" src={escuelas}></img>
-      <img
-        onClick={() => {
-          navigate(`/ejes-transversales/Expresión%20artística,%20creatividad%20y%20habilidades%20socioemocionales`);
-        }}
-        className="mini-images arte"
-        src={arte}
-      ></img>
-      <img
-        onClick={() => {
-          navigate(`/ejes-transversales/Perspectiva%20de%20Género,%20Cuerpo%20y%20Sexualidades`);
-        }}
-        className="mini-images genero"
-        src={genero}
-      ></img>
-      <img
-        className="mini-images vidaSaludable"
-        onClick={() => {
-          navigate(`/ejes-transversales/Vida%20saludable,%20impulso%20al%20deporte%20y%20prevención%20de%20adicciones`);
-        }}
-        src={vidaSaludable}
-      ></img>
-      <img
-        className="mini-images medioAmbiente"
-        onClick={() => {
-          navigate(`/ejes-transversales/Medio%20ambiente,%20sustentabilidad%20y%20territorio`);
-        }}
-        src={medioAmbiente}
-      ></img>
-      <img
-        className="mini-images interculturalidad"
-        onClick={() => {
-          navigate(`/ejes-transversales/Interculturalidad`);
-        }}
-        src={interculturalidad}
-      ></img>
-      <img
-        className="mini-images ciudadania"
-        onClick={() => {
-          navigate(`/ejes-transversales/Ciudadanía%20para%20una%20participación%20democrática`);
-        }}
-        src={ciudadania}
-      ></img>
-      <img
-        onClick={() => {
-          navigate(`/ejes-transversales/Ciencia,%20Tecnología%20y%20Sociedad%20del%20Futuro`);
-        }}
-        className="mini-images ciencia"
-        src={ciencia}
-      ></img>
-    </RutasStyles>
-  );
-}
+const ejes = [
+  { name: 'arte', image: arte, url: `/ejes-transversales/Expresión%20artística,%20creatividad%20y%20habilidades%20socioemocionales` },
+  { name: 'genero', image: genero, url: `/ejes-transversales/Perspectiva%20de%20Género,%20Cuerpo%20y%20Sexualidades` },
+  { name: 'vidaSaludable', image: vidaSaludable, url: `/ejes-transversales/Vida%20saludable,%20impulso%20al%20deporte%20y%20prevención%20de%20adicciones` },
+  { name: 'medioAmbiente', image: medioAmbiente, url: `/ejes-transversales/Medio%20ambiente,%20sustentabilidad%20y%20territorio` },
+  { name: 'interculturalidad', image: interculturalidad, url: `/ejes-transversales/Interculturalidad` },
+  { name: 'ciudadania', image: ciudadania, url: `/ejes-transversales/Ciudadanía%20para%20una%20participación%20democrática` },
+  { name: 'ciencia', image: ciencia, url: `/ejes-transversales/Ciencia,%20Tecnología%20y%20Sociedad%20del%20Futuro` },
+]
+
