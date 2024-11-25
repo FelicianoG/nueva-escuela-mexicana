@@ -17,6 +17,11 @@ export const HomePageStyleWrapper = styled.div`
   a {
     text-decoration: none;
   }
+
+  //Lo acabo de agregar para checar
+  /* section {
+  min-height:100vh} */
+
   .header {
     position: fixed;
     top: 0;
@@ -70,6 +75,7 @@ export const HomePageStyleWrapper = styled.div`
       color: #ffb375;
     }
   }
+
   .hero-section {
     position: relative;
     display: flex;
@@ -155,6 +161,246 @@ export const HomePageStyleWrapper = styled.div`
       justify-self: flex-end;
     }
   }
+
+  .rutas-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100%;
+
+    min-height: 60vw;
+
+    &__nem {
+      color: white;
+      font-size: 2em;
+      font-family: "Lulo-Bold";
+    }
+    &__nem h1 {
+      margin-bottom: 4px;
+    }
+    &__nem h2 {
+      font-family: "Lulo";
+      margin-bottom: 4px;
+    }
+    &__hero-title {
+      display: flex;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      width: 100%;
+      margin-right: 18rem;
+      max-width: 800px;
+      z-index: 5;
+      @media (max-width: 1300px) and (min-width: 800px) {
+        margin-left: 50px;
+      }
+    }
+    &__logo-span {
+      width: 30px;
+      transform: translateY(-6px);
+      z-index: 4;
+    }
+    &__description {
+      font-family: "Helvetica";
+      color: white;
+      max-width: 30rem;
+      margin-bottom: 30px;
+      text-align: justify;
+      letter-spacing: 0.1rem;
+    }
+    &__btn {
+      background-color: #d13d67;
+      border: none;
+      padding: 1rem 2rem;
+      font-family: "Lulo-Bold";
+      color: white;
+      border-radius: 8px;
+      transition: all 0.25s ease-in-out;
+      cursor: pointer;
+    }
+    &__btn:hover {
+      background-color: #de557c;
+    }
+    &__flor-container {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      align-items: flex-end;
+      justify-content: flex-end;
+      z-index: 1;
+    }
+    &__flor {
+      width: 400px;
+      height: 400px;
+      align-self: flex-end;
+      justify-self: flex-end;
+    }
+  }
+
+  .docentes {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px;
+    gap: 40px;
+    padding: 8rem 0;
+    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
+    border-top: white 5px solid;
+
+    @media (max-width: 800px) {
+       padding: 0;
+      }
+
+
+    &__title {
+      font-family: "Lulo-Bold";
+      font-size: 1.4rem;
+      max-width: 600px;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      @media (max-width: 400px) {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+      }
+    }
+
+    &__image-container-row {
+      width: 100%;
+      max-height: 200px;
+      margin-bottom: 100px;
+    }
+    &__image-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+      gap: 40px;
+    }
+    &__image {
+      max-height: 20vw;
+      @media (max-width: 800px) {
+        max-width: 80%;
+        max-height: unset;
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .documentos {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    gap: 40px;
+    padding: 30px;
+    &__title {
+      font-family: "Lulo-Bold";
+      font-size: x-large;
+      color: #d13d67;
+      margin-bottom: 30px;
+      text-align: center;
+      margin: none;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+    &__subtitle {
+      font-family: "Lulo";
+      color: #d13d67;
+      margin-bottom: 30px;
+      text-align: center;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+    &__container {
+      display: flex;
+      gap: 2rem;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+    &__item {
+      background-color: #d13d67;
+      color: white;
+      padding: 3rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        background-color: #d13d3d;
+      }
+      h3 {
+        font-family: "Lulo";
+        text-align: center;
+        user-select: none;
+      }
+    }
+  }
+
+  .video-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0;
+
+    &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__video {
+      width: 85%;
+      width: 70vw;
+      height: 40vw;
+      max-height: 567px;
+      max-width: 1000px;
+    }
+    &__title {
+      font-family: "Lulo-Bold";
+      color: #d13d67;
+      margin-bottom: 30px;
+      text-align: center;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+    &__paragraph {
+      font-family: "Helvetica";
+      font-size: medium;
+      line-height: 1.5rem;
+      max-width: 40rem;
+      margin-bottom: 30px;
+      text-align: justify;
+      letter-spacing: 0.1rem;
+    }
+  }
+
   .camara-section {
     position: relative;
     flex-direction: column;
@@ -319,6 +565,138 @@ export const HomePageStyleWrapper = styled.div`
       }
     }
   }
+
+  .violentometro-section {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 700px;
+    gap: 40px;
+    padding: 8rem 30px;
+
+    &__title {
+      font-family: "Lulo-Bold";
+      font-size: x-large;
+      color: #d13d67;
+      margin-bottom: 30px;
+      text-align: center;
+      margin: none;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+
+    &__subtitle {
+      font-family: "Lulo";
+      color: #d13d67;
+      margin-bottom: 30px;
+      text-align: center;
+      @media (max-width: 800px) {
+        margin-top: 40px;
+      }
+    }
+    
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column; /* Stack divs vertically */
+      gap: 0.5rem; /* Add spacing between items */
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+    .options div {
+      padding: 0.6rem 0.6rem 0.6rem 2rem; /* Add space for the bullet */
+      position: relative; /* Necessary for positioning the bullets */
+      color: black;
+      font-size: 1.4rem;
+      cursor: pointer;
+      border-radius: 4px; /* Optional rounded corners */
+    }
+
+    .options div:before {
+      content: ''; /* Add the bullet */
+      width: 12px; /* Bullet size */
+      height: 12px; /* Bullet size */
+      border-radius: 50%; /* Make the bullet circular */
+      display: inline-block;
+      position: absolute; /* Position the bullet */
+      left: 0; /* Align bullets to the left */
+      top: 50%; /* Center vertically */
+      transform: translateY(-50%); /* Correct alignment */
+      background-color: gray; /* Default bullet color (changeable) */
+    }
+
+    .options div:nth-child(1):before {
+      background-color: #ff2a40; /* Custom color for the first bullet */
+    }
+
+    .options div:nth-child(2):before {
+      background-color: #ff5742; /* Custom color for the second bullet */
+    }
+
+    .options div:nth-child(3):before {
+      background-color: #f27036; /* Custom color for the third bullet */
+    }
+
+    .options div:nth-child(4):before {
+      background-color: #ffa70d; /* Custom color for the fourth bullet */
+    }
+
+    .options div:nth-child(5):before {
+      background-color: #ffcf09; /* Custom color for the fifth bullet */
+    }
+
+    .options div:nth-child(6):before {
+      background-color: #bbc45b; /* Custom color for the sixth bullet */
+    }
+
+    .options div:nth-child(7):before {
+      background-color: #45b59d; /* Custom color for the seventh bullet */
+    }
+
+    .options div:nth-child(8):before {
+      background-color: #0090bd; /* Custom color for the eighth bullet */
+    }
+
+    &__container {
+      display: flex;
+      gap: 2rem;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+    }
+
+    &__item {
+      background-color: #d13d67;
+      color: white;
+      padding: 3rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        background-color: #d13d3d;
+      }
+      h3 {
+        font-family: "Lulo";
+        text-align: center;
+        user-select: none;
+      }
+    }
+    @media (max-width: 800px) {
+        padding: 1.8rem 3rem;
+    }
+  }
+
   .conferencias-section {
     display: flex;
     font-size: small;
@@ -362,139 +740,6 @@ export const HomePageStyleWrapper = styled.div`
     }
   }
 
-  .rutas-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    width: 100%;
-
-    min-height: 60vw;
-
-    &__nem {
-      color: white;
-      font-size: 2em;
-      font-family: "Lulo-Bold";
-    }
-    &__nem h1 {
-      margin-bottom: 4px;
-    }
-    &__nem h2 {
-      font-family: "Lulo";
-      margin-bottom: 4px;
-    }
-    &__hero-title {
-      display: flex;
-      align-items: end;
-      margin-bottom: 30px;
-    }
-    &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: center;
-      width: 100%;
-      margin-right: 18rem;
-      max-width: 800px;
-      z-index: 5;
-      @media (max-width: 1300px) and (min-width: 800px) {
-        margin-left: 50px;
-      }
-    }
-    &__logo-span {
-      width: 30px;
-      transform: translateY(-6px);
-      z-index: 4;
-    }
-    &__description {
-      font-family: "Helvetica";
-      color: white;
-      max-width: 30rem;
-      margin-bottom: 30px;
-      text-align: justify;
-      letter-spacing: 0.1rem;
-    }
-    &__btn {
-      background-color: #d13d67;
-      border: none;
-      padding: 1rem 2rem;
-      font-family: "Lulo-Bold";
-      color: white;
-      border-radius: 8px;
-      transition: all 0.25s ease-in-out;
-      cursor: pointer;
-    }
-    &__btn:hover {
-      background-color: #de557c;
-    }
-    &__flor-container {
-      display: flex;
-      position: absolute;
-      width: 100%;
-      height: inherit;
-      align-items: flex-end;
-      justify-content: flex-end;
-      z-index: 1;
-    }
-    &__flor {
-      width: 400px;
-      height: 400px;
-      align-self: flex-end;
-      justify-self: flex-end;
-    }
-  }
-  .docentes {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 500px;
-    gap: 40px;
-    /* padding: 30px; */
-    background: linear-gradient(157deg, rgba(158, 0, 93, 1) 0%, rgba(173, 28, 88, 1) 48%, rgba(211, 100, 74, 1) 92%, rgba(251, 176, 59, 1) 100%);
-    border-top: white 5px solid;
-
-    &__title {
-      font-family: "Lulo-Bold";
-      font-size: 1.4rem;
-      max-width: 600px;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      @media (max-width: 400px) {
-        font-size: 0.9rem;
-        line-height: 1.2rem;
-      }
-    }
-
-    &__image-container-row {
-      width: 100%;
-      max-height: 200px;
-      margin-bottom: 100px;
-    }
-    &__image-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      max-width: 500px;
-      gap: 40px;
-    }
-    &__image {
-      max-height: 20vw;
-      @media (max-width: 800px) {
-        max-width: 80%;
-        max-height: unset;
-        &:last-child {
-          margin-bottom: 40px;
-        }
-      }
-    }
-  }
   .infografias {
     display: flex;
     box-sizing: border-box;
@@ -537,103 +782,6 @@ export const HomePageStyleWrapper = styled.div`
           margin-bottom: 40px;
         }
       }
-    }
-  }
-  .documentos {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 700px;
-    gap: 40px;
-    padding: 30px;
-    &__title {
-      font-family: "Lulo-Bold";
-      font-size: x-large;
-      color: #d13d67;
-      margin-bottom: 30px;
-      text-align: center;
-      margin: none;
-      @media (max-width: 800px) {
-        margin-top: 40px;
-      }
-    }
-    &__subtitle {
-      font-family: "Lulo";
-      color: #d13d67;
-      margin-bottom: 30px;
-      text-align: center;
-      @media (max-width: 800px) {
-        margin-top: 40px;
-      }
-    }
-    &__container {
-      display: flex;
-      gap: 2rem;
-      @media (max-width: 800px) {
-        flex-direction: column;
-      }
-    }
-    &__item {
-      background-color: #d13d67;
-      color: white;
-      padding: 3rem;
-      border-radius: 1rem;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      &:hover {
-        transform: scale(1.05);
-        background-color: #d13d3d;
-      }
-      h3 {
-        font-family: "Lulo";
-        text-align: center;
-        user-select: none;
-      }
-    }
-  }
-  .video-section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 40px 0;
-
-    &__container {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__video {
-      width: 85%;
-      width: 70vw;
-      height: 40vw;
-      max-height: 567px;
-      max-width: 1000px;
-    }
-    &__title {
-      font-family: "Lulo-Bold";
-      color: #d13d67;
-      margin-bottom: 30px;
-      text-align: center;
-      @media (max-width: 800px) {
-        margin-top: 40px;
-      }
-    }
-    &__paragraph {
-      font-family: "Helvetica";
-      font-size: medium;
-      line-height: 1.5rem;
-      max-width: 40rem;
-      margin-bottom: 30px;
-      text-align: justify;
-      letter-spacing: 0.1rem;
     }
   }
 
@@ -724,6 +872,7 @@ export const HomePageStyleWrapper = styled.div`
       }
     }
   }
+
   .campos-formativos {
     display: flex;
     flex-direction: column;
@@ -778,6 +927,7 @@ export const HomePageStyleWrapper = styled.div`
       margin-bottom: 30px;
     }
   }
+
   .ejes-articuladores {
     display: flex;
     flex-direction: column;
@@ -841,6 +991,7 @@ export const HomePageStyleWrapper = styled.div`
       justify-content: space-between;
     }
   }
+
   .capacitaciones-section {
     display: flex;
     flex-direction: column;
@@ -922,6 +1073,7 @@ export const HomePageStyleWrapper = styled.div`
       color: white;
     }
   }
+
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
@@ -962,6 +1114,7 @@ export const HomePageStyleWrapper = styled.div`
       width: 30px;
     }
   }
+
   .footer {
     top: 0;
     left: 0;
@@ -993,6 +1146,7 @@ export const HomePageStyleWrapper = styled.div`
       z-index: 4;
     }
   }
+
   @media screen and (max-width: 800px) {
     .footer__container {
       flex-direction: column;

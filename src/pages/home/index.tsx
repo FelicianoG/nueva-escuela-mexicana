@@ -24,6 +24,7 @@ import Conafe from "../../assets/Sec-logos/CONAFE.png";
 import sep from "../../assets/Sec-logos/LOGO_SEP_VERTICAL.png";
 import secWhite from "../../assets/Sec-logos/logo-sec-white.png";
 import { DOCENTES_NOMBRES } from "../docentes-sonorenses/constants";
+import Violentometro from "./components/Violentometro";
 
 const {
   flor,
@@ -89,6 +90,7 @@ export default function Home() {
         <div className={scrollPosition > 200 ? "header__background" : "header__background header__background--transparent"}></div>
         <img onClick={() => handleFlower()} className="header__logo" src={flor} />
       </header>
+
       <section className="hero-section">
         <div className="hero-section__container">
           <div className="hero-section__hero-title">
@@ -148,7 +150,8 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="video-section">
+
+      {/* <section className="video-section">
         <div className="video-section__container">
           <h1 className="video-section__title">Implementación de la NEM en Sonora</h1>
           <iframe
@@ -160,19 +163,9 @@ export default function Home() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-          {/* <h1 className="video-section__title"></h1>
-          <p className="video-section__paragraph"></p> */}
-          {/* <iframe
-            className="video-section__video"
-            width="560"
-            height="315"
-            src="https://firebasestorage.googleapis.com/v0/b/nueva-escuela-mexicana-f7208.appspot.com/o/NEM.mp4?alt=media&token=fcb0461a-f703-479d-ad6d-d4ec94c91655"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe> */}
         </div>
-      </section>
+      </section> */}
+
       <section className="camara-section">
         <div className="content">
           <div className="text-container">
@@ -194,6 +187,13 @@ export default function Home() {
           <img className="conafe" src={Conafe}></img>
           <img className="sep" src={sep}></img>
           <img className="sec" src={secWhite}></img>
+        </div>
+      </section>
+
+      <section className="violentometro-section">
+        <div className="content">
+          <h1 className='violentometro-section__title'>Violentómetro Digital</h1>
+          <Violentometro></Violentometro>
         </div>
       </section>
 
@@ -235,35 +235,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="capacitaciones-section">
-        <h1>Capacitaciones ofrecidas en educación básica en el marco de la NEM</h1>
-        <Table rows={capacitaciones} headerColor="#d13d67" />
-      </section> */}
-      {/* <section className="capacitaciones-section">
-        <img className="creson" src={creson} alt="logo creson"></img>
-        <h1>PROYECCIÓN DE CAPACITACIÓN AL PERSONAL EDUCATIVO 2023-2024</h1>
-        <h2>“Fortalecimiento Pedagógico en el marco de la Nueva Escuela Mexicana”</h2>
-        <div>
-          <Table rows={proyeccion} headerColor="#d13d67" />
-        </div>
-      </section> */}
-      {/* <section className="community-section">
-        <div className="community-section__decoration"></div>
-        <div className="community-section__decoration-two"></div>
-        <div className="community-section__container">
-          <div className="community-section__image-container">
-            <img src={comunidadImg} alt="imagen sobre comunidad"></img>
-          </div>
-          <div className="community-section__text">
-            <h1 className="community-section__text__title">COMUNIDAD</h1>
-            <p className="community-section__text__paragraph">
-              La comunidad proporciona un sentido de pertenencia, conexión y apoyo mutuo entre sus miembros. Permite la colaboración en proyectos y la
-              resolución de problemas colectivos, fomentando el desarrollo social y económico. La comunidad también puede ser un espacio de
-              aprendizaje, crecimiento personal y cultural, y puede contribuir a la construcción de identidades colectivas y valores compartidos.
-            </p>
-          </div>
-        </div>
-      </section> */}
       <section className="campos-formativos">
         <div className="campos-formativos__container">
           <div className="campos-formativos__title-container">
@@ -284,6 +255,7 @@ export default function Home() {
           <CampoFormativo title="De lo humano y lo comunitario"></CampoFormativo>
         </div>
       </section>
+
       <section className="ejes-articuladores">
         <div className="ejes-articuladores__container">
           <div className="ejes-articuladores__title-container">
@@ -314,6 +286,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
       <footer className="footer">
         <div className="footer__division"></div>
         <div className="footer__container">
@@ -328,6 +301,7 @@ export default function Home() {
           </a>
         </div>
       </footer>
+
     </HomePageStyleWrapper>
   );
 }
